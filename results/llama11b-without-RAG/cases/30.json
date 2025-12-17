@@ -1,0 +1,79 @@
+{
+  "case_number": 30,
+  "findings": "An infiltrative pancreatic cancer measuring 51 mm is observed in the body of the pancreas. Serosal invasion and retropancreatic tissue invasion are noted. The splenic vein is interrupted by the tumor, suggesting invasion. There is contact of more than 180\u00b0 with both the celiac artery and splenic artery, suggesting invasion, with the celiac artery showing stenosis. No other local invasion factors are identified. Lymph node metastases are observed in two nodes each at stations 9 and 10. No other metastases are observed.",
+  "responses": [
+    {
+      "type": "ai",
+      "content": "Task 1: Diagnose the local invasion factors of pancreatic cancer.\n\nCH0 (no invasion of the common hepatic artery)\nDU0 (no invasion of the duodenum)\nS1 (serosal invasion)\nRP1 (retropancreatic tissue invasion)\nPV0 (no invasion of the portal vein)\nA1 (invasion of the celiac artery)\nPL0 (no invasion of the pancreatic lymphatic vessels)\nOO1 (invasion of the splenic artery)\n\nTask 2: Determine the classification for local invasion (T classification) of pancreatic cancer.\n\nBased on the size of the tumor (51 mm) and the presence of serosal invasion, retropancreatic tissue invasion, and invasion of the celiac artery and splenic artery, the T classification is T3.\n\nTask 3: Determine the N classification of pancreatic cancer.\n\nRegional lymph nodes for pancreatic cancer in the body of the pancreas are:\n- Station 9 (splenic nodes)\n- Station 10 (splenic nodes)\n- Station 12 (left gastric nodes)\n- Station 13 (common hepatic nodes)\n- Station 17 (suprapancreatic nodes)\n- Station 18 (pancreaticoduodenal nodes)\n\nThe patient's metastatic lymph node stations are:\n- Station 9\n- Station 10\n\nThese are regional lymph nodes. Counting only the metastatic lymph nodes within the regional stations, there are 4 metastatic lymph nodes.\n\nN classification: N1b\n\nTask 4: Determine the M classification of pancreatic cancer.\n\nThere are no distant metastases observed. The splenic vein is interrupted by the tumor, but this is considered local invasion, not distant metastasis.\n\nM classification: M0\n\nTask 5: Determine the resectability classification of pancreatic cancer.\n\nThe tumor is large (51 mm) and has invaded the celiac artery and splenic artery, but there are no distant or non-regional metastases. The tumor is not considered unresectable based on the provided criteria.\n\nResectability classification: Resectable (R)\n\nTask 6: Determine the overall stage according to the JPS staging system.\n\nT classification: T3\nN classification: N1b\nM classification: M0\n\nBased on the T classification, the tumor is classified as T3. Based on the N classification, the tumor has regional lymph node metastasis, which corresponds to N1b. Based on the M classification, there are no distant metastases.\n\nThe overall stage is Stage IIA.",
+      "additional_kwargs": {}
+    }
+  ],
+  "evaluations": {
+    "CH": {
+      "predicted": "CH0",
+      "ground truth": "CH0",
+      "matches": true
+    },
+    "DU": {
+      "predicted": "DU0",
+      "ground truth": "DU0",
+      "matches": true
+    },
+    "S": {
+      "predicted": "S1",
+      "ground truth": "S1",
+      "matches": true
+    },
+    "RP": {
+      "predicted": "RP1",
+      "ground truth": "RP1",
+      "matches": true
+    },
+    "PV": {
+      "predicted": "PV0",
+      "ground truth": "PV1",
+      "matches": false
+    },
+    "A": {
+      "predicted": "A1",
+      "ground truth": "A1",
+      "matches": true
+    },
+    "PL": {
+      "predicted": "PL0",
+      "ground truth": "PL0",
+      "matches": true
+    },
+    "OO": {
+      "predicted": "OO1",
+      "ground truth": "OO0",
+      "matches": false
+    },
+    "T": {
+      "predicted": "T3",
+      "ground truth": "T4",
+      "matches": false
+    },
+    "N": {
+      "predicted": "N1b",
+      "ground truth": "N1b",
+      "matches": true
+    },
+    "M": {
+      "predicted": "M0",
+      "ground truth": "M0",
+      "matches": true
+    },
+    "Resectability": {
+      "predicted": "R",
+      "ground truth": "UR",
+      "matches": false
+    },
+    "Stage": {
+      "predicted": "Stage IIA",
+      "ground truth": "Stage III",
+      "matches": false
+    }
+  },
+  "duration": 3.830877
+}

@@ -1,0 +1,81 @@
+{
+  "case_number": 63,
+  "findings": "A nodular pancreatic cancer measuring 6 mm is observed in the tail of the pancreas. No local invasion factors are identified. There are no findings suggestive of lymph node metastasis. No other metastases are observed.",
+  "responses": [
+    {
+      "type": "ai",
+      "content": "Task 1: CH0, DU0, S0, RP0, PV0, A0, PL0, OO0\n\nTask 2: T1a (tumor size of 6 mm, limited to the pancreas)\n\nTask 3: Regional lymph nodes for the tail of the pancreas are: 8a, 9, 10, 11p, 11d, 18. Since there are no findings suggestive of lymph node metastasis, the N classification is N0.\n\nTask 4: M0 (no distant metastases observed)\n\nTask 5: R (no criteria for BR or UR are met)\n\nTask 6: Stage IA (T1, N0, M0)",
+      "additional_kwargs": {
+        "refusal": null
+      }
+    }
+  ],
+  "evaluations": {
+    "CH": {
+      "predicted": "CH0",
+      "ground truth": "CH0",
+      "matches": true
+    },
+    "DU": {
+      "predicted": "DU0",
+      "ground truth": "DU0",
+      "matches": true
+    },
+    "S": {
+      "predicted": "S0",
+      "ground truth": "S0",
+      "matches": true
+    },
+    "RP": {
+      "predicted": "RP0",
+      "ground truth": "RP0",
+      "matches": true
+    },
+    "PV": {
+      "predicted": "PV0",
+      "ground truth": "PV0",
+      "matches": true
+    },
+    "A": {
+      "predicted": "A0",
+      "ground truth": "A0",
+      "matches": true
+    },
+    "PL": {
+      "predicted": "PL0",
+      "ground truth": "PL0",
+      "matches": true
+    },
+    "OO": {
+      "predicted": "OO0",
+      "ground truth": "OO0",
+      "matches": true
+    },
+    "T": {
+      "predicted": "T1a",
+      "ground truth": "T1a",
+      "matches": true
+    },
+    "N": {
+      "predicted": "N0",
+      "ground truth": "N0",
+      "matches": true
+    },
+    "M": {
+      "predicted": "M0",
+      "ground truth": "M0",
+      "matches": true
+    },
+    "Resectability": {
+      "predicted": "R",
+      "ground truth": "R",
+      "matches": true
+    },
+    "Stage": {
+      "predicted": "Stage IA",
+      "ground truth": "Stage IA",
+      "matches": true
+    }
+  },
+  "duration": 3.252848
+}

@@ -1,0 +1,79 @@
+{
+  "case_number": 80,
+  "findings": "An infiltrative pancreatic cancer measuring 28 mm is observed in the head of the pancreas. The common bile duct is interrupted by the tumor, suggesting invasion. Retropancreatic tissue invasion is noted. There is contact of more than 180\u00b0 with the common hepatic artery, suggesting invasion, though the tumor does not involve the proper hepatic artery or the celiac artery. No other local invasion factors are identified. Lymph node metastases are observed in two nodes at station 2. Osteolytic changes are scattered in the vertebral bodies and pelvic bones, raising suspicion of multiple bone metastases.",
+  "responses": [
+    {
+      "type": "ai",
+      "content": "Task 1: Diagnose the local invasion factors of pancreatic cancer.\n\nCH1 (Common bile duct invasion)\nDU0 (Dudenum invasion)\nS0 (Splenic invasion)\nRP1 (Retropancreatic tissue invasion)\nPV0 (Portal vein invasion)\nA1 (Common hepatic artery invasion)\nPL0 (Portal lymph node invasion)\nOO1 (Osteolytic changes in vertebral bodies and pelvic bones, indicating possible bone metastasis, but not a local invasion factor)\n\nTask 2: Determine the classification for local invasion (T classification) of pancreatic cancer.\n\nBased on the size of the tumor (28 mm) and the presence of local invasion factors, the T classification is T3.\n\nTask 3: Determine the N classification of pancreatic cancer.\n\nRegional lymph nodes for pancreatic cancer are:\n- Station 1: Celiac lymph nodes\n- Station 2: Common hepatic lymph nodes\n- Station 3: Proper hepatic lymph nodes\n- Station 4: Left gastric lymph nodes\n- Station 5: Common hepatic lymph nodes\n- Station 6: Proper hepatic lymph nodes\n- Station 7: Left gastric lymph nodes\n- Station 8: Splenic lymph nodes\n- Station 9: Pancreatic lymph nodes\n- Station 10: Proximal lymph nodes\n- Station 11: Distal lymph nodes\n- Station 12: Celiac lymph nodes\n\nThe patient's metastatic lymph node stations are:\n- Station 2\n\nThis is a regional lymph node station. Counting only the metastatic lymph nodes within the regional stations, there is 1 involved regional node.\n\nN classification: N1a\n\nTask 4: Determine the M classification of pancreatic cancer.\n\nThe presence of osteolytic changes in the vertebral bodies and pelvic bones indicates distant metastases.\n\nM classification: M1\n\nTask 5: Determine the resectability classification of pancreatic cancer.\n\nThe presence of distant metastases (M1) qualifies as Unresectable (UR).\n\nTask 6: Based on the determined T, N, and M categories, classify the overall stage according to the JPS staging system.\n\nT classification: T3\nN classification: N1a\nM classification: M1\n\nStage: Stage IV",
+      "additional_kwargs": {}
+    }
+  ],
+  "evaluations": {
+    "CH": {
+      "predicted": "CH1",
+      "ground truth": "CH1",
+      "matches": true
+    },
+    "DU": {
+      "predicted": "DU0",
+      "ground truth": "DU0",
+      "matches": true
+    },
+    "S": {
+      "predicted": "S0",
+      "ground truth": "S0",
+      "matches": true
+    },
+    "RP": {
+      "predicted": "RP1",
+      "ground truth": "RP1",
+      "matches": true
+    },
+    "PV": {
+      "predicted": "PV0",
+      "ground truth": "PV0",
+      "matches": true
+    },
+    "A": {
+      "predicted": "A1",
+      "ground truth": "A1",
+      "matches": true
+    },
+    "PL": {
+      "predicted": "PL0",
+      "ground truth": "PL0",
+      "matches": true
+    },
+    "OO": {
+      "predicted": "OO1",
+      "ground truth": "OO0",
+      "matches": false
+    },
+    "T": {
+      "predicted": "T3",
+      "ground truth": "T3",
+      "matches": true
+    },
+    "N": {
+      "predicted": "N1a",
+      "ground truth": "N0",
+      "matches": false
+    },
+    "M": {
+      "predicted": "M1",
+      "ground truth": "M1",
+      "matches": true
+    },
+    "Resectability": {
+      "predicted": "UR",
+      "ground truth": "UR",
+      "matches": true
+    },
+    "Stage": {
+      "predicted": "Stage IV",
+      "ground truth": "Stage IV",
+      "matches": true
+    }
+  },
+  "duration": 3.41065
+}

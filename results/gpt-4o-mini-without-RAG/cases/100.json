@@ -1,0 +1,81 @@
+{
+  "case_number": 100,
+  "findings": "An infiltrative pancreatic cancer measuring 59 mm is observed in the body of the pancreas. Serosal invasion and retropancreatic tissue invasion are noted. There is contact of more than 180\u00b0 with both the superior mesenteric vein and the splenic vein, suggesting invasion. No invasion beyond the inferior border of the duodenum is observed. No other local invasion factors are identified. There are no findings suggestive of lymph node metastasis. No other metastases are observed.",
+  "responses": [
+    {
+      "type": "ai",
+      "content": "Based on the provided image findings, here are the responses for each task:\n\n**Task 1:** Diagnose the local invasion factors of pancreatic cancer.  \nResponse: **CH0, DU0, S1, RP1, PV1, A0, PL0, OO0**\n\n**Task 2:** Determine the classification for local invasion (T classification) of pancreatic cancer.  \nResponse: **T4** (due to invasion of the superior mesenteric vein and splenic vein, indicating significant local invasion).\n\n**Task 3:** Determine the N classification (N0, N1a, N1b) of pancreatic cancer.  \nRegional lymph nodes for the body of the pancreas are: 8a, 8p, 9, 10, 11p, 11d, 14t, 18.  \nSince there are no findings suggestive of lymph node metastasis, the response is: **N0**.\n\n**Task 4:** Determine the M classification (M0 or M1) of pancreatic cancer.  \nResponse: **M0** (no distant metastases observed).\n\n**Task 5:** Determine the resectability classification of pancreatic cancer.  \nResponse: **UR-LA** (due to the contact of more than 180\u00b0 with both the superior mesenteric vein and the splenic vein, indicating locally advanced disease).\n\n**Task 6:** Classify the overall stage according to the JPS staging system.  \nResponse: **Stage IV** (due to the classification of UR-LA, indicating unresectable disease).",
+      "additional_kwargs": {
+        "refusal": null
+      }
+    }
+  ],
+  "evaluations": {
+    "CH": {
+      "predicted": "CH0",
+      "ground truth": "CH0",
+      "matches": true
+    },
+    "DU": {
+      "predicted": "DU0",
+      "ground truth": "DU0",
+      "matches": true
+    },
+    "S": {
+      "predicted": "S1",
+      "ground truth": "S1",
+      "matches": true
+    },
+    "RP": {
+      "predicted": "RP1",
+      "ground truth": "RP1",
+      "matches": true
+    },
+    "PV": {
+      "predicted": "PV1",
+      "ground truth": "PV1",
+      "matches": true
+    },
+    "A": {
+      "predicted": "A0",
+      "ground truth": "A0",
+      "matches": true
+    },
+    "PL": {
+      "predicted": "PL0",
+      "ground truth": "PL0",
+      "matches": true
+    },
+    "OO": {
+      "predicted": "OO0",
+      "ground truth": "OO0",
+      "matches": true
+    },
+    "T": {
+      "predicted": "T4",
+      "ground truth": "T3",
+      "matches": false
+    },
+    "N": {
+      "predicted": "N0",
+      "ground truth": "N0",
+      "matches": true
+    },
+    "M": {
+      "predicted": "M0",
+      "ground truth": "M0",
+      "matches": true
+    },
+    "Resectability": {
+      "predicted": "UR",
+      "ground truth": "BR",
+      "matches": false
+    },
+    "Stage": {
+      "predicted": "Stage IV",
+      "ground truth": "Stage IIA",
+      "matches": false
+    }
+  },
+  "duration": 6.37646
+}

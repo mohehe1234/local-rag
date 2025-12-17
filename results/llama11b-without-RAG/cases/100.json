@@ -1,0 +1,79 @@
+{
+  "case_number": 100,
+  "findings": "An infiltrative pancreatic cancer measuring 59 mm is observed in the body of the pancreas. Serosal invasion and retropancreatic tissue invasion are noted. There is contact of more than 180\u00b0 with both the superior mesenteric vein and the splenic vein, suggesting invasion. No invasion beyond the inferior border of the duodenum is observed. No other local invasion factors are identified. There are no findings suggestive of lymph node metastasis. No other metastases are observed.",
+  "responses": [
+    {
+      "type": "ai",
+      "content": "Task 1: Diagnose the local invasion factors of pancreatic cancer.\n\nCH0 (no invasion of the common hepatic artery)\nDU0 (no invasion beyond the inferior border of the duodenum)\nS1 (serosal invasion)\nRP1 (retropancreatic tissue invasion)\nPV1 (invasion of the superior mesenteric vein)\nA0 (no invasion of the abdominal aorta)\nPL0 (no invasion of the portal vein)\nOO0 (no invasion of the celiac axis)\n\nTask 2: Determine the T classification of pancreatic cancer.\n\nBased on the size of the tumor (59 mm) and the presence of serosal invasion and retropancreatic tissue invasion, the T classification is T3.\n\nTask 3: Determine the N classification of pancreatic cancer.\n\nRegional lymph nodes for pancreatic cancer in the body of the pancreas include:\n- Station 12 (left gastric artery)\n- Station 13 (common hepatic artery)\n- Station 14 (proper hepatic artery)\n- Station 17 (splenic artery)\n- Station 18 (coeliac artery)\n- Station 19 (superior mesenteric artery)\n- Station 15 (left gastroepiploic artery)\n- Station 16 (right gastroepiploic artery)\n\nNo metastatic lymph nodes are identified in these regional stations.\n\nN classification: N0\n\nTask 4: Determine the M classification of pancreatic cancer.\n\nNo distant metastases are observed.\n\nM classification: M0\n\nTask 5: Determine the resectability classification of pancreatic cancer.\n\nNo criteria for Borderline Resectable (BR) or Unresectable (UR) are met.\n\nResectability classification: R\n\nTask 6: Determine the overall stage according to the JPS staging system.\n\nT classification: T3\nN classification: N0\nM classification: M0\n\nStage: Stage IIA",
+      "additional_kwargs": {}
+    }
+  ],
+  "evaluations": {
+    "CH": {
+      "predicted": "CH0",
+      "ground truth": "CH0",
+      "matches": true
+    },
+    "DU": {
+      "predicted": "DU0",
+      "ground truth": "DU0",
+      "matches": true
+    },
+    "S": {
+      "predicted": "S1",
+      "ground truth": "S1",
+      "matches": true
+    },
+    "RP": {
+      "predicted": "RP1",
+      "ground truth": "RP1",
+      "matches": true
+    },
+    "PV": {
+      "predicted": "PV1",
+      "ground truth": "PV1",
+      "matches": true
+    },
+    "A": {
+      "predicted": "A0",
+      "ground truth": "A0",
+      "matches": true
+    },
+    "PL": {
+      "predicted": "PL0",
+      "ground truth": "PL0",
+      "matches": true
+    },
+    "OO": {
+      "predicted": "OO0",
+      "ground truth": "OO0",
+      "matches": true
+    },
+    "T": {
+      "predicted": "T3",
+      "ground truth": "T3",
+      "matches": true
+    },
+    "N": {
+      "predicted": "N0",
+      "ground truth": "N0",
+      "matches": true
+    },
+    "M": {
+      "predicted": "M0",
+      "ground truth": "M0",
+      "matches": true
+    },
+    "Resectability": {
+      "predicted": "R",
+      "ground truth": "BR",
+      "matches": false
+    },
+    "Stage": {
+      "predicted": "Stage IIA",
+      "ground truth": "Stage IIA",
+      "matches": true
+    }
+  },
+  "duration": 2.866045
+}

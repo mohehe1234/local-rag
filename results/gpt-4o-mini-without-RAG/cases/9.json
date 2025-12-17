@@ -1,0 +1,81 @@
+{
+  "case_number": 9,
+  "findings": "An infiltrative pancreatic cancer measuring 37 mm is observed in the head of the pancreas. The tumor is in extensive contact with the duodenum, causing duodenal stenosis and raising suspicion of duodenal invasion. Retropancreatic tissue invasion is noted. The tumor is in contact with the inferior vena cava, with an indistinct boundary, suggesting invasion. No other local invasion factors are identified. Lymph node metastases are observed in two nodes at station 2. No other metastases are observed.",
+  "responses": [
+    {
+      "type": "ai",
+      "content": "Task 1: CH0, DU1, S0, RP1, PV1, A0, PL0, OO0\n\nTask 2: T3\n\nTask 3: Regional lymph nodes for the head: 6, 8a, 8p, 12a, 12b, 12p, 13, 14t, 17. Metastatic lymph nodes are observed in station 2 (not regional). Therefore, N0.\n\nTask 4: M0\n\nTask 5: R\n\nTask 6: Stage IIA",
+      "additional_kwargs": {
+        "refusal": null
+      }
+    }
+  ],
+  "evaluations": {
+    "CH": {
+      "predicted": "CH0",
+      "ground truth": "CH0",
+      "matches": true
+    },
+    "DU": {
+      "predicted": "DU1",
+      "ground truth": "DU1",
+      "matches": true
+    },
+    "S": {
+      "predicted": "S0",
+      "ground truth": "S0",
+      "matches": true
+    },
+    "RP": {
+      "predicted": "RP1",
+      "ground truth": "RP1",
+      "matches": true
+    },
+    "PV": {
+      "predicted": "PV1",
+      "ground truth": "PV0",
+      "matches": false
+    },
+    "A": {
+      "predicted": "A0",
+      "ground truth": "A0",
+      "matches": true
+    },
+    "PL": {
+      "predicted": "PL0",
+      "ground truth": "PL0",
+      "matches": true
+    },
+    "OO": {
+      "predicted": "OO0",
+      "ground truth": "OO1",
+      "matches": false
+    },
+    "T": {
+      "predicted": "T3",
+      "ground truth": "T3",
+      "matches": true
+    },
+    "N": {
+      "predicted": "N0",
+      "ground truth": "N0",
+      "matches": true
+    },
+    "M": {
+      "predicted": "M0",
+      "ground truth": "M1",
+      "matches": false
+    },
+    "Resectability": {
+      "predicted": "R",
+      "ground truth": "UR",
+      "matches": false
+    },
+    "Stage": {
+      "predicted": "Stage IIA",
+      "ground truth": "Stage IV",
+      "matches": false
+    }
+  },
+  "duration": 2.335982
+}

@@ -1,0 +1,79 @@
+{
+  "case_number": 36,
+  "findings": "A pancreatic cancer measuring 43 mm is observed in the head of the pancreas. Serosal invasion and retropancreatic tissue invasion are noted. There is contact of more than 180\u00b0 with the portal vein, suggesting invasion. No invasion beyond the inferior border of the duodenum is observed. Contact of less than 180\u00b0 with the celiac artery is noted, raising suspicion of invasion, although no deformation or stenosis of the celiac artery is observed. The tumor does not involve the common hepatic artery or proper hepatic artery. There is extrapancreatic nerve plexus invasion. No other local invasion factors are identified. Lymph node metastases are observed in two nodes each at stations 8a and 8p. No other metastases are observed.",
+  "responses": [
+    {
+      "type": "ai",
+      "content": "Okay, I will perform the requested tasks based strictly on the provided image findings and the implicit JPS staging guidelines.\n\n**Task 1: Diagnose the local invasion factors**\n\nBased on the findings:\n\n*   **CH**0 (No common hepatic artery involvement)\n*   **DU**0 (No invasion beyond the inferior border of the duodenum)\n*   **S**1 (Serosal invasion noted)\n*   **RP**1 (Retropancreatic tissue invasion noted)\n*   **PV**1 (Contact of more than 180\u00b0 with the portal vein, suggesting invasion)\n*   **A**0 (No common hepatic artery involvement)\n*   **PL**0 (No invasion of the Peripancreatic tissue)\n*   **OO**0 (No other local invasion factors identified)\n\nTherefore, the response is: **CH0, DU0, S1, RP1, PV1, A0, PL0, OO0**\n\n**Task 2: Determine the T classification**\n\nBased on Task 1, we have: S1, RP1, PV1. According to the JPS guidelines, these findings indicate a T3 lesion.\n\nTherefore, the response is: **T3**\n\n**Task 3: Determine the N classification**\n\nThe tumor is located in the head of the pancreas. Regional lymph node stations for the pancreatic head are: 6, 8a, 8b, 8p, 9, 10, 12, 13, 14, 17.\n\nThe image findings state lymph node metastases are observed in two nodes each at stations 8a and 8p. Both 8a and 8p are regional stations. The total number of involved regional nodes is 2 + 2 = 4.\n\nAccording to the JPS guidelines, 1-3 involved regional nodes is N1a, and 4 or more is N1b.\n\nTherefore, the response is: **N1b**\n\n**Task 4: Determine the M classification**\n\nThe image findings state \"No other metastases are observed.\" This indicates no distant metastases.\n\nTherefore, the response is: **M0**\n\n**Task 5: Determine the resectability classification**\n\nBased on the local invasion factors (Task 1) and the M classification (Task 4):\n\n*   PV1 indicates borderline resectability.\n*   M0 indicates no distant metastasis.\n\nTherefore, the response is: **BR**\n\n**Task 6: Determine the overall stage**\n\nBased on the determined T, N, and M categories:\n\n*   T3\n*   N1b\n*   M0\n\nAccording to the JPS staging system, T3 N1b M0 corresponds to **Stage III**.\n\nTherefore, the response is: **Stage III**\n\n\n\n",
+      "additional_kwargs": {}
+    }
+  ],
+  "evaluations": {
+    "CH": {
+      "predicted": "CH0",
+      "ground truth": "CH0",
+      "matches": true
+    },
+    "DU": {
+      "predicted": "DU0",
+      "ground truth": "DU0",
+      "matches": true
+    },
+    "S": {
+      "predicted": "S1",
+      "ground truth": "S1",
+      "matches": true
+    },
+    "RP": {
+      "predicted": "RP1",
+      "ground truth": "RP1",
+      "matches": true
+    },
+    "PV": {
+      "predicted": "PV1",
+      "ground truth": "PV1",
+      "matches": true
+    },
+    "A": {
+      "predicted": "A0",
+      "ground truth": "A1",
+      "matches": false
+    },
+    "PL": {
+      "predicted": "PL0",
+      "ground truth": "PL1",
+      "matches": false
+    },
+    "OO": {
+      "predicted": "OO0",
+      "ground truth": "OO0",
+      "matches": true
+    },
+    "T": {
+      "predicted": "T3",
+      "ground truth": "T4",
+      "matches": false
+    },
+    "N": {
+      "predicted": "N1b",
+      "ground truth": "N1b",
+      "matches": true
+    },
+    "M": {
+      "predicted": "M0",
+      "ground truth": "M0",
+      "matches": true
+    },
+    "Resectability": {
+      "predicted": "BR",
+      "ground truth": "BR",
+      "matches": true
+    },
+    "Stage": {
+      "predicted": "Stage III",
+      "ground truth": "Stage III",
+      "matches": true
+    }
+  },
+  "duration": 14.198684
+}

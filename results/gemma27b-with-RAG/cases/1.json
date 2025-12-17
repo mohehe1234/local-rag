@@ -1,0 +1,175 @@
+{
+  "case_number": 1,
+  "findings": "A nodular pancreatic cancer measuring 20 mm is observed in the body of the pancreas. No local invasion factors are noted. Lymph node metastases are identified in two nodes at station 10 and two nodes at station 11d. No other metastases are observed.",
+  "responses": [
+    {
+      "type": "human",
+      "content": "Task 1: Diagnose the local invasion factors of pancreatic cancer (CH, DU, S, RP, PV, A, PL, OO), and respond in the format: e.g., 'CH0, DU1, S1, RP1, PV0, A0, PL0, OO1'.",
+      "additional_kwargs": {
+        "task_key": "Step_1"
+      }
+    },
+    {
+      "type": "ai",
+      "content": "CH0, DU0, S0, RP0, PV0, A0, PL0, OO0",
+      "additional_kwargs": {
+        "chunks": [
+          "6"
+        ]
+      }
+    },
+    {
+      "type": "human",
+      "content": "Task 2: Based on the answer to Task 1, determine the classification for local invasion (T classification) of pancreatic cancer (T0, Tis, T1a, T1b, T1c, T2, T3, T4). If both size-based (e.g., T1, T2) and extension-based (e.g., T3, T4) criteria are met, assign the higher T category reflecting greater invasion.",
+      "additional_kwargs": {
+        "task_key": "Step_2"
+      }
+    },
+    {
+      "type": "ai",
+      "content": "T2\n\n\n\n",
+      "additional_kwargs": {
+        "chunks": [
+          "5",
+          "15"
+        ]
+      }
+    },
+    {
+      "type": "human",
+      "content": "Task 3: Determine the N classification (N0, N1a, N1b) of pancreatic cancer. First, list the stations defined as regional lymph nodes based on the tumor location (head, body, or tail) according to the guideline. Then identify which of the patient\u2019s metastatic lymph node stations are regional, and exclude all others. Count only the metastatic lymph nodes\u2014not stations\u2014within the regional stations, and assign the N classification accordingly. Verify the total count of involved regional nodes.",
+      "additional_kwargs": {
+        "task_key": "Step_3"
+      }
+    },
+    {
+      "type": "ai",
+      "content": "Regional lymph nodes for the body of the pancreas are: 8a, 8p, 9, 10, 11p, 11d, 14t, 18.\n\nMetastases are identified in station 10 and station 11d, both of which are regional lymph node stations.\n\nTotal number of involved regional lymph nodes: 2 (station 10) + 2 (station 11d) = 4.\n\nTherefore, the N classification is N1b.",
+      "additional_kwargs": {
+        "chunks": [
+          "12",
+          "10"
+        ]
+      }
+    },
+    {
+      "type": "human",
+      "content": "Task 4: Determine the M classification (M0 or M1) of pancreatic cancer, based on the presence or absence of distant metastases, such as to non-regional lymph nodes or distant organs. Do not confuse direct tumor invasion with distant metastasis.",
+      "additional_kwargs": {
+        "task_key": "Step_4"
+      }
+    },
+    {
+      "type": "ai",
+      "content": "M0",
+      "additional_kwargs": {
+        "chunks": [
+          "12",
+          "5"
+        ]
+      }
+    },
+    {
+      "type": "human",
+      "content": "Task 5: Based on the results of Task 1 and Task 4, determine the resectability classification of pancreatic cancer as Resectable (R), Borderline Resectable (BR), or Unresectable (UR). Regional lymph node involvement does not qualify as distant or non-regional metastasis. If none of the criteria for BR or UR are met, classify as R.",
+      "additional_kwargs": {
+        "task_key": "Step_5"
+      }
+    },
+    {
+      "type": "ai",
+      "content": "R",
+      "additional_kwargs": {
+        "chunks": [
+          "15",
+          "16"
+        ]
+      }
+    },
+    {
+      "type": "human",
+      "content": "Task 6: Based on the determined T, N, and M categories, classify the overall stage according to the JPS staging system. Output one of: Stage 0, Stage IA, Stage IB, Stage IIA, Stage IIB, Stage III, or Stage IV.",
+      "additional_kwargs": {
+        "task_key": "Step_6"
+      }
+    },
+    {
+      "type": "ai",
+      "content": "Based on the provided information and guideline:\n\n*   **T classification:** T2 (from Task 2)\n*   **N classification:** N1b (from Task 3)\n*   **M classification:** M0 (from Task 4)\n\nReferring to Table 3 in the guideline, a T2 tumor with N1b and M0 corresponds to **Stage IIB**.",
+      "additional_kwargs": {
+        "chunks": [
+          "15",
+          "2"
+        ]
+      }
+    }
+  ],
+  "evaluations": {
+    "CH": {
+      "predicted": "CH0",
+      "ground truth": "CH0",
+      "matches": true
+    },
+    "DU": {
+      "predicted": "DU0",
+      "ground truth": "DU0",
+      "matches": true
+    },
+    "S": {
+      "predicted": "S0",
+      "ground truth": "S0",
+      "matches": true
+    },
+    "RP": {
+      "predicted": "RP0",
+      "ground truth": "RP0",
+      "matches": true
+    },
+    "PV": {
+      "predicted": "PV0",
+      "ground truth": "PV0",
+      "matches": true
+    },
+    "A": {
+      "predicted": "A0",
+      "ground truth": "A0",
+      "matches": true
+    },
+    "PL": {
+      "predicted": "PL0",
+      "ground truth": "PL0",
+      "matches": true
+    },
+    "OO": {
+      "predicted": "OO0",
+      "ground truth": "OO0",
+      "matches": true
+    },
+    "T": {
+      "predicted": "T2",
+      "ground truth": "T1c",
+      "matches": false
+    },
+    "N": {
+      "predicted": "N1b",
+      "ground truth": "N1b",
+      "matches": true
+    },
+    "M": {
+      "predicted": "M0",
+      "ground truth": "M0",
+      "matches": true
+    },
+    "Resectability": {
+      "predicted": "R",
+      "ground truth": "R",
+      "matches": true
+    },
+    "Stage": {
+      "predicted": "Stage IIB",
+      "ground truth": "Stage IIB",
+      "matches": true
+    }
+  },
+  "duration": 26.321311
+}

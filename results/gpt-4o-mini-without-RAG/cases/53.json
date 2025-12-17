@@ -1,0 +1,81 @@
+{
+  "case_number": 53,
+  "findings": "An infiltrative pancreatic cancer measuring 58 mm is observed in the head of the pancreas. Serosal invasion and retropancreatic tissue invasion are noted. There is contact of more than 180\u00b0 with both the portal vein and the superior mesenteric vein, along with vascular stenosis, suggesting invasion. No invasion beyond the inferior border of the duodenum is observed. Contact of less than 180\u00b0 with the celiac artery is noted, raising suspicion of invasion, although no deformation or stenosis of the celiac artery is observed. The tumor does not involve the common hepatic artery or proper hepatic artery. No other local invasion factors are identified. No lymph node metastases are present. No other metastases are observed.",
+  "responses": [
+    {
+      "type": "ai",
+      "content": "Based on the provided image findings, here are the responses for each task:\n\n**Task 1:** Diagnose the local invasion factors of pancreatic cancer.  \nResponse: **CH0, DU0, S1, RP1, PV1, A0, PL0, OO0**\n\n**Task 2:** Determine the classification for local invasion (T classification) of pancreatic cancer.  \nResponse: **T3** (The tumor extends beyond the pancreas but does not involve the celiac artery or superior mesenteric artery.)\n\n**Task 3:** Determine the N classification (N0, N1a, N1b) of pancreatic cancer.  \n- Regional lymph nodes for the head: 6, 8a, 8p, 12a, 12b, 12p, 13, 14t, 17  \n- Patient's metastatic lymph node stations: None (No lymph node metastases are present).  \nResponse: **N0** (No regional lymph node metastasis)\n\n**Task 4:** Determine the M classification (M0 or M1) of pancreatic cancer.  \nResponse: **M0** (No distant metastases are observed.)\n\n**Task 5:** Determine the resectability classification of pancreatic cancer.  \nResponse: **UR-LA** (The tumor has contact of more than 180\u00b0 with both the portal vein and the superior mesenteric vein, indicating locally advanced disease.)\n\n**Task 6:** Classify the overall stage according to the JPS staging system.  \nResponse: **Stage III** (T3, N0, M0 corresponds to Stage III.)",
+      "additional_kwargs": {
+        "refusal": null
+      }
+    }
+  ],
+  "evaluations": {
+    "CH": {
+      "predicted": "CH0",
+      "ground truth": "CH0",
+      "matches": true
+    },
+    "DU": {
+      "predicted": "DU0",
+      "ground truth": "DU0",
+      "matches": true
+    },
+    "S": {
+      "predicted": "S1",
+      "ground truth": "S1",
+      "matches": true
+    },
+    "RP": {
+      "predicted": "RP1",
+      "ground truth": "RP1",
+      "matches": true
+    },
+    "PV": {
+      "predicted": "PV1",
+      "ground truth": "PV1",
+      "matches": true
+    },
+    "A": {
+      "predicted": "A0",
+      "ground truth": "A1",
+      "matches": false
+    },
+    "PL": {
+      "predicted": "PL0",
+      "ground truth": "PL0",
+      "matches": true
+    },
+    "OO": {
+      "predicted": "OO0",
+      "ground truth": "OO0",
+      "matches": true
+    },
+    "T": {
+      "predicted": "T3",
+      "ground truth": "T4",
+      "matches": false
+    },
+    "N": {
+      "predicted": "N0",
+      "ground truth": "N0",
+      "matches": true
+    },
+    "M": {
+      "predicted": "M0",
+      "ground truth": "M0",
+      "matches": true
+    },
+    "Resectability": {
+      "predicted": "UR",
+      "ground truth": "BR",
+      "matches": false
+    },
+    "Stage": {
+      "predicted": "Stage III",
+      "ground truth": "Stage III",
+      "matches": true
+    }
+  },
+  "duration": 8.037137
+}

@@ -1,0 +1,79 @@
+{
+  "case_number": 70,
+  "findings": "An infiltrative pancreatic cancer measuring 41 mm is observed in the head of the pancreas. The common bile duct is interrupted by the tumor, suggesting invasion. Serosal invasion and retropancreatic tissue invasion are noted. There is contact of more than 180\u00b0 with the superior mesenteric vein, suggesting invasion. The tumor extends beyond the inferior border of the duodenum. Contact of more than 180\u00b0 with both the celiac artery and the common hepatic artery is observed, suggesting invasion. No other local invasion factors are identified. Lymph node metastasis is observed in one node at station 8p. No other metastases are observed.",
+  "responses": [
+    {
+      "type": "ai",
+      "content": "Okay, I will proceed with the tasks based on the provided image findings and guidelines.\n\n**Task 1: Diagnose the local invasion factors**\n\nBased on the findings:\n\n*   **CH** (Common Hepatic Artery): 1 (Contact >180\u00b0)\n*   **DU** (Duodenum): 1 (Extension beyond inferior border)\n*   **S** (Serosa): 1\n*   **RP** (Retropancreatic tissue): 1\n*   **PV** (Portal Vein): 0 (Contact with SMV, not PV)\n*   **A** (Celiac Artery): 1 (Contact >180\u00b0)\n*   **PL** (Peripancreatic Lymph Nodes): 0 (No direct invasion mentioned)\n*   **OO** (Other Organs): 0\n\nTherefore, the response is: **CH1, DU1, S1, RP1, PV0, A1, PL0, OO0**\n\n**Task 2: Determine the T classification**\n\nBased on Task 1, the following invasion factors are present: CH1, DU1, S1, RP1, A1. According to the guideline, any invasion of adjacent organs or structures qualifies as T3 or higher. Since there is invasion of multiple adjacent structures, the T classification is **T4**.\n\n**Task 3: Determine the N classification**\n\nThe tumor is located in the head of the pancreas. Therefore, regional lymph node stations are: 6, 8a, 8b, 8p, 9, 10, 12, 13, 14, 17a, 17b, 17c.\n\nThe image findings state lymph node metastasis is observed in one node at station 8p. Station 8p is a regional lymph node station.\n\nTherefore, there is metastasis in one regional lymph node station. The N classification is **N1a**.\n\n**Task 4: Determine the M classification**\n\nThe image findings state no other metastases are observed. Therefore, the M classification is **M0**.\n\n**Task 5: Determine the resectability classification**\n\nBased on the findings:\n\n*   T4\n*   M0\n\nThe criteria for Borderline Resectable (BR) or Unresectable (UR) are not met. Therefore, the resectability classification is **UR**.\n\n**Task 6: Determine the overall stage**\n\nBased on the determined T, N, and M categories:\n\n*   T4\n*   N1a\n*   M0\n\nAccording to the JPS staging system, T4 N1a M0 corresponds to **Stage III**.\n\n\n\n",
+      "additional_kwargs": {}
+    }
+  ],
+  "evaluations": {
+    "CH": {
+      "predicted": "CH1",
+      "ground truth": "CH1",
+      "matches": true
+    },
+    "DU": {
+      "predicted": "DU1",
+      "ground truth": "DU0",
+      "matches": false
+    },
+    "S": {
+      "predicted": "S1",
+      "ground truth": "S1",
+      "matches": true
+    },
+    "RP": {
+      "predicted": "RP1",
+      "ground truth": "RP1",
+      "matches": true
+    },
+    "PV": {
+      "predicted": "PV0",
+      "ground truth": "PV1",
+      "matches": false
+    },
+    "A": {
+      "predicted": "A1",
+      "ground truth": "A1",
+      "matches": true
+    },
+    "PL": {
+      "predicted": "PL0",
+      "ground truth": "PL0",
+      "matches": true
+    },
+    "OO": {
+      "predicted": "OO0",
+      "ground truth": "OO0",
+      "matches": true
+    },
+    "T": {
+      "predicted": "T4",
+      "ground truth": "T4",
+      "matches": true
+    },
+    "N": {
+      "predicted": "N1a",
+      "ground truth": "N1a",
+      "matches": true
+    },
+    "M": {
+      "predicted": "M0",
+      "ground truth": "M0",
+      "matches": true
+    },
+    "Resectability": {
+      "predicted": "UR",
+      "ground truth": "UR",
+      "matches": true
+    },
+    "Stage": {
+      "predicted": "Stage III",
+      "ground truth": "Stage III",
+      "matches": true
+    }
+  },
+  "duration": 13.514787
+}

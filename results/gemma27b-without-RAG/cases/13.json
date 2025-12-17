@@ -1,0 +1,79 @@
+{
+  "case_number": 13,
+  "findings": "A pancreatic cancer measuring 59 mm is observed in the head of the pancreas. The tumor invades duodenum and causes duodenal stenosis. Serosal invasion and retropancreatic tissue invasion are noted. There is contact of more than 180\u00b0 with the portal vein and superior mesenteric vein, accompanied by vascular stenosis, raising suspicion of invasion. No invasion beyond the inferior border of the duodenum is observed. The tumor also invades the right renal vein. No other local invasion factors are identified. Lymph node metastases are observed in one node at station 11p, three nodes at station 14t, two nodes at station 16a, and three nodes at station 16b. No other metastases are observed.",
+  "responses": [
+    {
+      "type": "ai",
+      "content": "Okay, I will proceed with the tasks based on the provided image findings and guidelines.\n\n**Task 1: Diagnose the local invasion factors**\n\nBased on the findings:\n\n*   **CH**0 (No invasion beyond the inferior border of the duodenum)\n*   **DU**1 (Duodenal invasion and stenosis)\n*   **S**1 (Serosal invasion)\n*   **RP**1 (Retropancreatic tissue invasion)\n*   **PV**1 (Contact of more than 180\u00b0 with the portal vein and superior mesenteric vein, accompanied by vascular stenosis, raising suspicion of invasion)\n*   **A**1 (Right renal vein invasion)\n*   **PL**0 (No perineural invasion identified)\n*   **OO**0 (No other organ invasion identified)\n\n**Response:** CH0, DU1, S1, RP1, PV1, A1, PL0, OO0\n\n**Task 2: Determine the T classification**\n\nBased on Task 1 and the provided guidelines, the following local invasion factors are present: DU1, S1, RP1, PV1, A1.\n\n*   DU, S, and RP indicate T2.\n*   PV and A indicate T4.\n\nSince T4 represents a higher degree of invasion, the T classification is **T4**.\n\n**Task 3: Determine the N classification**\n\nFirst, identify regional lymph node stations based on the tumor location (head of the pancreas):\n\n*   Regional stations: 6, 8, 13, 14, 16, 17, 18\n\nNow, identify metastatic regional stations and count the involved nodes:\n\n*   Station 11p: Not a regional station. Exclude.\n*   Station 14t: Regional station. 3 involved nodes.\n*   Station 16a: Regional station. 2 involved nodes.\n*   Station 16b: Regional station. 3 involved nodes.\n\nTotal involved regional nodes: 3 + 2 + 3 = 8\n\nTherefore, the N classification is **N1b** (8 or more regional lymph nodes involved).\n\n**Task 4: Determine the M classification**\n\nThe findings state there are no other metastases observed beyond the regional lymph nodes. Therefore, the M classification is **M0**.\n\n**Task 5: Determine the resectability classification**\n\nBased on the findings:\n\n*   **A1** (Right renal vein invasion) indicates Unresectable (UR).\n\nTherefore, the resectability classification is **UR**.\n\n**Task 6: Determine the overall stage**\n\nBased on the determined T, N, and M categories:\n\n*   T4\n*   N1b\n*   M0\n\nAccording to the JPS staging system, T4N1bM0 corresponds to **Stage IV**.\n\n\n\n",
+      "additional_kwargs": {}
+    }
+  ],
+  "evaluations": {
+    "CH": {
+      "predicted": "CH0",
+      "ground truth": "CH0",
+      "matches": true
+    },
+    "DU": {
+      "predicted": "DU1",
+      "ground truth": "DU1",
+      "matches": true
+    },
+    "S": {
+      "predicted": "S1",
+      "ground truth": "S1",
+      "matches": true
+    },
+    "RP": {
+      "predicted": "RP1",
+      "ground truth": "RP1",
+      "matches": true
+    },
+    "PV": {
+      "predicted": "PV1",
+      "ground truth": "PV1",
+      "matches": true
+    },
+    "A": {
+      "predicted": "A1",
+      "ground truth": "A0",
+      "matches": false
+    },
+    "PL": {
+      "predicted": "PL0",
+      "ground truth": "PL0",
+      "matches": true
+    },
+    "OO": {
+      "predicted": "OO0",
+      "ground truth": "OO1",
+      "matches": false
+    },
+    "T": {
+      "predicted": "T4",
+      "ground truth": "T3",
+      "matches": false
+    },
+    "N": {
+      "predicted": "N1b",
+      "ground truth": "N1a",
+      "matches": false
+    },
+    "M": {
+      "predicted": "M0",
+      "ground truth": "M1",
+      "matches": false
+    },
+    "Resectability": {
+      "predicted": "UR",
+      "ground truth": "UR",
+      "matches": true
+    },
+    "Stage": {
+      "predicted": "Stage IV",
+      "ground truth": "Stage IV",
+      "matches": true
+    }
+  },
+  "duration": 14.472332
+}

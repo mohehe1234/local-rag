@@ -1,0 +1,79 @@
+{
+  "case_number": 41,
+  "findings": "An infiltrative pancreatic cancer measuring 15 mm is observed in the head of the pancreas. Serosal invasion, retropancreatic tissue invasion, and extrapancreatic nerve plexus invasion are noted. No other local invasion factors are identified. No lymph node metastases are present. No other metastases are observed.",
+  "responses": [
+    {
+      "type": "ai",
+      "content": "Task 1: CH0, DU0, S1, RP1, PV0, A0, PL0, OO0\n\nExplanation: The tumor is located in the head of the pancreas, so CH0 and DU0 are 0. Serosal invasion (S1) and retropancreatic tissue invasion (RP1) are noted, but no other local invasion factors are identified.\n\nTask 2: T3\n\nExplanation: The tumor is 15 mm in size, which corresponds to T1a or T1b. However, the presence of serosal invasion and retropancreatic tissue invasion indicates T3.\n\nTask 3: N0\n\nExplanation: Regional lymph nodes for pancreatic cancer are:\n- Head: CH1, CH2, CH3, CH4, CH5, CH6, CH7, CH8, CH9, CH10, CH11, CH12, CH13, CH14, CH15, CH16, CH17, CH18, CH19, CH20, CH21, CH22, CH23, CH24, CH25, CH26, CH27, CH28, CH29, CH30, CH31, CH32, CH33, CH34, CH35, CH36, CH37, CH38, CH39, CH40, CH41, CH42, CH43, CH44, CH45, CH46, CH47, CH48, CH49, CH50, CH51, CH52, CH53, CH54, CH55, CH56, CH57, CH58, CH59, CH60, CH61, CH62, CH63, CH64, CH65, CH66, CH67, CH68, CH69, CH70, CH71, CH72, CH73, CH74, CH75, CH76, CH77, CH78, CH79, CH80, CH81, CH82, CH83, CH84, CH85, CH86, CH87, CH88, CH89, CH90, CH91, CH92, CH93, CH94, CH95, CH96, CH97, CH98, CH99, CH100\n- Body: CH1, CH2, CH3, CH4, CH5, CH6, CH7, CH8, CH9, CH10, CH11, CH12, CH13, CH14, CH15, CH16, CH17, CH18, CH19, CH20, CH21, CH22, CH23, CH24, CH25, CH26, CH27, CH28, CH29, CH30, CH31, CH32, CH33, CH34, CH35, CH36, CH37, CH38, CH39, CH40, CH41, CH42, CH43, CH44, CH45, CH46, CH47, CH48, CH49, CH50, CH51, CH52, CH53, CH54, CH55, CH56, CH57, CH58, CH59, CH60, CH61, CH62, CH63, CH64, CH65, CH66, CH67, CH68, CH69, CH70, CH71, CH72, CH73, CH74, CH75, CH76, CH77, CH78, CH79, CH80, CH81, CH82, CH83, CH84, CH85, CH86, CH87, CH88, CH89, CH90, CH91, CH92, CH93, CH94, CH95, CH96, CH97, CH98, CH99, CH100\n- Tail: CH1, CH2, CH3, CH4, CH5, CH6, CH7, CH8, CH9, CH10, CH11, CH12, CH13, CH14, CH15, CH16, CH17, CH18, CH19, CH20, CH21, CH22, CH23, CH24, CH25, CH26, CH27, CH28, CH29, CH30, CH31, CH32, CH33, CH34, CH35, CH36, CH37, CH38, CH39, CH40, CH41, CH42, CH43, CH44, CH45, CH46, CH47, CH48, CH49, CH50, CH51, CH52, CH53, CH54, CH55, CH56, CH57, CH58, CH59, CH60, CH61, CH62, CH63, CH64, CH65, CH66, CH67, CH68, CH69, CH70, CH71, CH72, CH73, CH74, CH75, CH76, CH77, CH78, CH79, CH80, CH81, CH82, CH83, CH84, CH85, CH86, CH87, CH88, CH89, CH90, CH91, CH92, CH93, CH94, CH95, CH96, CH97, CH98, CH99, CH100\n\nNo lymph node metastases are present, so N0.\n\nTask 4: M0\n\nExplanation: No distant metastases are observed.\n\nTask 5: R\n\nExplanation: The tumor is T3, but it is resectable. Regional lymph node involvement does not qualify as distant or non-regional metastasis.\n\nTask 6: Stage IIA\n\nExplanation: The tumor is T3, N0, and M0, so it corresponds to Stage IIA.",
+      "additional_kwargs": {}
+    }
+  ],
+  "evaluations": {
+    "CH": {
+      "predicted": "CH0",
+      "ground truth": "CH0",
+      "matches": true
+    },
+    "DU": {
+      "predicted": "DU0",
+      "ground truth": "DU0",
+      "matches": true
+    },
+    "S": {
+      "predicted": "S1",
+      "ground truth": "S1",
+      "matches": true
+    },
+    "RP": {
+      "predicted": "RP1",
+      "ground truth": "RP1",
+      "matches": true
+    },
+    "PV": {
+      "predicted": "PV0",
+      "ground truth": "PV0",
+      "matches": true
+    },
+    "A": {
+      "predicted": "A0",
+      "ground truth": "A0",
+      "matches": true
+    },
+    "PL": {
+      "predicted": "PL0",
+      "ground truth": "PL1",
+      "matches": false
+    },
+    "OO": {
+      "predicted": "OO0",
+      "ground truth": "OO0",
+      "matches": true
+    },
+    "T": {
+      "predicted": "T3",
+      "ground truth": "T3",
+      "matches": true
+    },
+    "N": {
+      "predicted": "N0",
+      "ground truth": "N0",
+      "matches": true
+    },
+    "M": {
+      "predicted": "M0",
+      "ground truth": "M0",
+      "matches": true
+    },
+    "Resectability": {
+      "predicted": "R",
+      "ground truth": "R",
+      "matches": true
+    },
+    "Stage": {
+      "predicted": "Stage IIA",
+      "ground truth": "Stage IIA",
+      "matches": true
+    }
+  },
+  "duration": 8.304722
+}

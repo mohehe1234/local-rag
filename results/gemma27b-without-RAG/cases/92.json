@@ -1,0 +1,79 @@
+{
+  "case_number": 92,
+  "findings": "An infiltrative pancreatic cancer measuring 48 mm is observed in the tail of the pancreas. Serosal invasion and retropancreatic tissue invasion are noted. There is contact of more than 180\u00b0 with the splenic artery, suggesting invasion. The tumor is in contact with the stomach, with an indistinct boundary, indicating invasion. No other local invasion factors are identified. No lymph node metastases are present. A contrast-enhancing mass with surrounding edema is observed in the left centrum semiovale, raising suspicion of brain metastasis.",
+  "responses": [
+    {
+      "type": "ai",
+      "content": "Okay, I will perform the requested tasks based strictly on the provided image findings and the implicit JPS staging guideline.\n\n**Task 1: Diagnose the local invasion factors**\n\nBased on the image findings:\n*   **CH**0 (No findings of common hepatic duct invasion)\n*   **DU**1 (Duodenal invasion present)\n*   **S**1 (Splenic artery invasion present - contact >180 degrees)\n*   **RP**1 (Retropancreatic tissue invasion present)\n*   **PV**0 (Portal vein invasion not present)\n*   **A**0 (Aortic invasion not present)\n*   **PL**0 (Peritoneal invasion not present)\n*   **OO**0 (Other organs invasion not present)\n\n**Response:** CH0, DU1, S1, RP1, PV0, A0, PL0, OO0\n\n**Task 2: Determine the T classification**\n\nBased on Task 1 and the JPS guideline (implicitly assuming size >2cm qualifies as T2, and any invasion qualifies as at least T2):\n\n*   The tumor size is 48mm (>2cm).\n*   There is invasion of the duodenum, splenic artery, and retropancreatic tissue.\n\nTherefore, the T classification is **T3**.\n\n**Task 3: Determine the N classification**\n\nBased on the tumor location (tail of the pancreas), regional lymph node stations are:\n\n*   Splenorenal\n*   Celiac\n*   Superior Mesenteric\n*   Paraaortic\n\nThe image findings state *no lymph node metastases are present*. Therefore, the N classification is **N0**.\n\n**Task 4: Determine the M classification**\n\nThe image findings describe a contrast-enhancing mass in the left centrum semiovale, raising suspicion of brain metastasis. This constitutes distant metastasis. Therefore, the M classification is **M1**.\n\n**Task 5: Determine the resectability classification**\n\nBased on the results of Task 1 and Task 4:\n\n*   Local invasion factors are present (DU, S, RP).\n*   Distant metastasis is present (brain).\n\nTherefore, the resectability classification is **Unresectable (UR)**.\n\n**Task 6: Determine the overall stage**\n\nBased on the determined T, N, and M categories:\n\n*   T3\n*   N0\n*   M1\n\nAccording to the JPS staging system, this corresponds to **Stage IV**.\n\n\n\n",
+      "additional_kwargs": {}
+    }
+  ],
+  "evaluations": {
+    "CH": {
+      "predicted": "CH0",
+      "ground truth": "CH0",
+      "matches": true
+    },
+    "DU": {
+      "predicted": "DU1",
+      "ground truth": "DU0",
+      "matches": false
+    },
+    "S": {
+      "predicted": "S1",
+      "ground truth": "S1",
+      "matches": true
+    },
+    "RP": {
+      "predicted": "RP1",
+      "ground truth": "RP1",
+      "matches": true
+    },
+    "PV": {
+      "predicted": "PV0",
+      "ground truth": "PV0",
+      "matches": true
+    },
+    "A": {
+      "predicted": "A0",
+      "ground truth": "A1",
+      "matches": false
+    },
+    "PL": {
+      "predicted": "PL0",
+      "ground truth": "PL0",
+      "matches": true
+    },
+    "OO": {
+      "predicted": "OO0",
+      "ground truth": "OO1",
+      "matches": false
+    },
+    "T": {
+      "predicted": "T3",
+      "ground truth": "T3",
+      "matches": true
+    },
+    "N": {
+      "predicted": "N0",
+      "ground truth": "N0",
+      "matches": true
+    },
+    "M": {
+      "predicted": "M1",
+      "ground truth": "M1",
+      "matches": true
+    },
+    "Resectability": {
+      "predicted": "UR",
+      "ground truth": "UR",
+      "matches": true
+    },
+    "Stage": {
+      "predicted": "Stage IV",
+      "ground truth": "Stage IV",
+      "matches": true
+    }
+  },
+  "duration": 12.548191
+}

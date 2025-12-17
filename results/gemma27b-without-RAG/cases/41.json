@@ -1,0 +1,79 @@
+{
+  "case_number": 41,
+  "findings": "An infiltrative pancreatic cancer measuring 15 mm is observed in the head of the pancreas. Serosal invasion, retropancreatic tissue invasion, and extrapancreatic nerve plexus invasion are noted. No other local invasion factors are identified. No lymph node metastases are present. No other metastases are observed.",
+  "responses": [
+    {
+      "type": "ai",
+      "content": "Okay, I will perform the requested tasks based solely on the provided image findings and the implicit JPS staging guideline.\n\n**Task 1: Diagnose the local invasion factors**\n\nBased on the image findings:\n*   CH0 (No common hepatic duct involvement)\n*   DU0 (No duodenal involvement)\n*   S1 (Serosal invasion present)\n*   RP1 (Retropancreatic tissue invasion present)\n*   PV0 (No portal vein involvement)\n*   A0 (No aorta involvement)\n*   PL0 (No pancreatic lymph node involvement)\n*   OO0 (No other organ involvement)\n\n**Response:** CH0, DU0, S1, RP1, PV0, A0, PL0, OO0\n\n**Task 2: Determine the T classification**\n\nThe tumor size is 15mm. Serosal invasion and retropancreatic tissue invasion are present. According to the guideline, these findings indicate T2.\n\n**Response:** T2\n\n**Task 3: Determine the N classification**\n\nThe tumor is located in the head of the pancreas. Regional lymph nodes for the head of the pancreas are:\n*   Peri-pancreatic lymph nodes\n*   Superior mesenteric vein lymph nodes\n*   Posterior pancreaticoduodenal lymph nodes\n*   Inferior pancreaticoduodenal lymph nodes\n\nThe image findings state \"No lymph node metastases are present.\" Therefore, there are no metastatic regional lymph nodes.\n\n**Response:** N0\n\n**Task 4: Determine the M classification**\n\nThe image findings state \"No other metastases are observed.\"\n\n**Response:** M0\n\n**Task 5: Determine the resectability classification**\n\nBased on the local invasion factors (S1, RP1) and the absence of distant metastasis (M0), the cancer is classified as Resectable (R).\n\n**Response:** R\n\n**Task 6: Determine the overall stage**\n\nBased on the determined T (T2), N (N0), and M (M0) categories, the overall stage according to the JPS staging system is Stage IIA.\n\n**Response:** Stage IIA\n\n\n\n",
+      "additional_kwargs": {}
+    }
+  ],
+  "evaluations": {
+    "CH": {
+      "predicted": "CH0",
+      "ground truth": "CH0",
+      "matches": true
+    },
+    "DU": {
+      "predicted": "DU0",
+      "ground truth": "DU0",
+      "matches": true
+    },
+    "S": {
+      "predicted": "S1",
+      "ground truth": "S1",
+      "matches": true
+    },
+    "RP": {
+      "predicted": "RP1",
+      "ground truth": "RP1",
+      "matches": true
+    },
+    "PV": {
+      "predicted": "PV0",
+      "ground truth": "PV0",
+      "matches": true
+    },
+    "A": {
+      "predicted": "A0",
+      "ground truth": "A0",
+      "matches": true
+    },
+    "PL": {
+      "predicted": "PL0",
+      "ground truth": "PL1",
+      "matches": false
+    },
+    "OO": {
+      "predicted": "OO0",
+      "ground truth": "OO0",
+      "matches": true
+    },
+    "T": {
+      "predicted": "T2",
+      "ground truth": "T3",
+      "matches": false
+    },
+    "N": {
+      "predicted": "N0",
+      "ground truth": "N0",
+      "matches": true
+    },
+    "M": {
+      "predicted": "M0",
+      "ground truth": "M0",
+      "matches": true
+    },
+    "Resectability": {
+      "predicted": "R",
+      "ground truth": "R",
+      "matches": true
+    },
+    "Stage": {
+      "predicted": "Stage IIA",
+      "ground truth": "Stage IIA",
+      "matches": true
+    }
+  },
+  "duration": 10.584986
+}

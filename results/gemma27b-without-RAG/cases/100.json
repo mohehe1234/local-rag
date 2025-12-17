@@ -1,0 +1,79 @@
+{
+  "case_number": 100,
+  "findings": "An infiltrative pancreatic cancer measuring 59 mm is observed in the body of the pancreas. Serosal invasion and retropancreatic tissue invasion are noted. There is contact of more than 180\u00b0 with both the superior mesenteric vein and the splenic vein, suggesting invasion. No invasion beyond the inferior border of the duodenum is observed. No other local invasion factors are identified. There are no findings suggestive of lymph node metastasis. No other metastases are observed.",
+  "responses": [
+    {
+      "type": "ai",
+      "content": "Okay, I will perform the requested tasks based solely on the provided image findings and the implicit JPS staging guideline.\n\n**Task 1: Diagnose the local invasion factors**\n\nBased on the findings:\n*   **CH0:** No invasion beyond the inferior border of the duodenum.\n*   **DU1:** Serosal invasion noted.\n*   **S1:** Retropancreatic tissue invasion noted.\n*   **RP1:** Contact of more than 180\u00b0 with both the superior mesenteric vein and the splenic vein, suggesting invasion.\n*   **PV0:** No invasion of portal vein.\n*   **A0:** No arterial involvement.\n*   **PL0:** No Peritoneal invasion.\n*   **OO0:** No other organ invasion.\n\nTherefore, the response is: **CH0, DU1, S1, RP1, PV0, A0, PL0, OO0**\n\n**Task 2: Determine the T classification**\n\nBased on Task 1 and the JPS guideline (implicitly):\n\n*   DU1, S1, and RP1 are present, indicating invasion beyond the pancreas.\n*   The tumor size is 59mm, which falls into the T2 category.\n*   Since RP1 is present, this indicates T3.\n*   Therefore, the higher T category is **T3**.\n\n**Task 3: Determine the N classification**\n\nBased on the findings, there are no findings suggestive of lymph node metastasis. Therefore:\n\n*   **N0**\n\n**Task 4: Determine the M classification**\n\nBased on the findings, no distant metastases are observed. Therefore:\n\n*   **M0**\n\n**Task 5: Determine the resectability classification**\n\nBased on the results of Task 1 and Task 4:\n\n*   The tumor is T3, indicating invasion of adjacent organs.\n*   There are no distant metastases (M0).\n*   Therefore, the resectability classification is **Borderline Resectable (BR)**.\n\n**Task 6: Determine the overall stage**\n\nBased on the determined T, N, and M categories (T3, N0, M0):\n\nAccording to the JPS staging system:\n\n*   T3, N0, M0 corresponds to **Stage IIB**.\n\n\n\n",
+      "additional_kwargs": {}
+    }
+  ],
+  "evaluations": {
+    "CH": {
+      "predicted": "CH0",
+      "ground truth": "CH0",
+      "matches": true
+    },
+    "DU": {
+      "predicted": "DU1",
+      "ground truth": "DU0",
+      "matches": false
+    },
+    "S": {
+      "predicted": "S1",
+      "ground truth": "S1",
+      "matches": true
+    },
+    "RP": {
+      "predicted": "RP1",
+      "ground truth": "RP1",
+      "matches": true
+    },
+    "PV": {
+      "predicted": "PV0",
+      "ground truth": "PV1",
+      "matches": false
+    },
+    "A": {
+      "predicted": "A0",
+      "ground truth": "A0",
+      "matches": true
+    },
+    "PL": {
+      "predicted": "PL0",
+      "ground truth": "PL0",
+      "matches": true
+    },
+    "OO": {
+      "predicted": "OO0",
+      "ground truth": "OO0",
+      "matches": true
+    },
+    "T": {
+      "predicted": "T3",
+      "ground truth": "T3",
+      "matches": true
+    },
+    "N": {
+      "predicted": "N0",
+      "ground truth": "N0",
+      "matches": true
+    },
+    "M": {
+      "predicted": "M0",
+      "ground truth": "M0",
+      "matches": true
+    },
+    "Resectability": {
+      "predicted": "BR",
+      "ground truth": "BR",
+      "matches": true
+    },
+    "Stage": {
+      "predicted": "Stage IIB",
+      "ground truth": "Stage IIA",
+      "matches": false
+    }
+  },
+  "duration": 11.573402
+}

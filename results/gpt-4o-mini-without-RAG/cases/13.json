@@ -1,0 +1,81 @@
+{
+  "case_number": 13,
+  "findings": "A pancreatic cancer measuring 59 mm is observed in the head of the pancreas. The tumor invades duodenum and causes duodenal stenosis. Serosal invasion and retropancreatic tissue invasion are noted. There is contact of more than 180\u00b0 with the portal vein and superior mesenteric vein, accompanied by vascular stenosis, raising suspicion of invasion. No invasion beyond the inferior border of the duodenum is observed. The tumor also invades the right renal vein. No other local invasion factors are identified. Lymph node metastases are observed in one node at station 11p, three nodes at station 14t, two nodes at station 16a, and three nodes at station 16b. No other metastases are observed.",
+  "responses": [
+    {
+      "type": "ai",
+      "content": "**Task 1:**  \nBased on the provided findings, the local invasion factors of pancreatic cancer are:  \nDU1 (duodenal invasion present), S1 (serosal invasion present), RP1 (retropancreatic tissue invasion present), PV1 (portal venous system invasion present), A1 (arterial system invasion present, as there is contact with the portal vein and superior mesenteric vein), and OO1 (invasion of other organs, as there is invasion of the right renal vein). The other factors (bile duct invasion, extrapancreatic nerve plexus invasion) are absent.  \nThus, the response is:  \n**DU1, S1, RP1, PV1, A1, PL0, OO1**\n\n---\n\n**Task 2:**  \nThe tumor size is 59 mm, which classifies it as T3 (tumor extends beyond the pancreas but does not involve the celiac artery or superior mesenteric artery). Additionally, there is evidence of local invasion factors (duodenal, serosal, retropancreatic, and vascular invasion). Since T3 is already indicative of local extension, the classification remains T3.  \nThus, the response is:  \n**T3**\n\n---\n\n**Task 3:**  \nFor the head of the pancreas, the regional lymph nodes are defined as: 6, 8a, 8p, 12a, 12b, 12p, 13, 14t, 17.  \nThe metastatic lymph nodes observed are:  \n- 1 node at station 11p (not regional)  \n- 3 nodes at station 14t (regional)  \n- 2 nodes at station 16a (not regional)  \n- 3 nodes at station 16b (not regional)  \n\nOnly the 3 nodes at station 14t are regional. Therefore, the total count of involved regional nodes is 3.  \nThis leads to the N classification of:  \n**N1b** (metastasis in four or more regional lymph nodes).\n\n---\n\n**Task 4:**  \nThere are no distant metastases observed in the findings, as all noted lymph node metastases are regional. Therefore, the M classification is:  \n**M0**\n\n---\n\n**Task 5:**  \nThe tumor shows local invasion factors and has a classification of T3, with N1b indicating regional lymph node involvement. However, there are no distant metastases (M0). Since the criteria for resectability (no distant metastasis and no significant vascular invasion beyond the defined limits) are met, the classification is:  \n**Resectable (R)**\n\n---\n\n**Task 6:**  \nBased on the determined categories: T3, N1b, and M0, the overall stage according to the JPS staging system is:  \n**Stage IIB** (T0, Tis, T1 (T1a, T1b, T1c), T2, T3 with N1 (N1a, N1b) and M0).",
+      "additional_kwargs": {
+        "refusal": null
+      }
+    }
+  ],
+  "evaluations": {
+    "CH": {
+      "predicted": "CH0",
+      "ground truth": "CH0",
+      "matches": true
+    },
+    "DU": {
+      "predicted": "DU1",
+      "ground truth": "DU1",
+      "matches": true
+    },
+    "S": {
+      "predicted": "S1",
+      "ground truth": "S1",
+      "matches": true
+    },
+    "RP": {
+      "predicted": "RP1",
+      "ground truth": "RP1",
+      "matches": true
+    },
+    "PV": {
+      "predicted": "PV1",
+      "ground truth": "PV1",
+      "matches": true
+    },
+    "A": {
+      "predicted": "A1",
+      "ground truth": "A0",
+      "matches": false
+    },
+    "PL": {
+      "predicted": "PL0",
+      "ground truth": "PL0",
+      "matches": true
+    },
+    "OO": {
+      "predicted": "OO1",
+      "ground truth": "OO1",
+      "matches": true
+    },
+    "T": {
+      "predicted": "T3",
+      "ground truth": "T3",
+      "matches": true
+    },
+    "N": {
+      "predicted": "N1b",
+      "ground truth": "N1a",
+      "matches": false
+    },
+    "M": {
+      "predicted": "M0",
+      "ground truth": "M1",
+      "matches": false
+    },
+    "Resectability": {
+      "predicted": "R",
+      "ground truth": "UR",
+      "matches": false
+    },
+    "Stage": {
+      "predicted": "Stage IIB",
+      "ground truth": "Stage IV",
+      "matches": false
+    }
+  },
+  "duration": 24.6953
+}

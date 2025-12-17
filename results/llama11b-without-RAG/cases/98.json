@@ -1,0 +1,79 @@
+{
+  "case_number": 98,
+  "findings": "An infiltrative pancreatic cancer measuring 41 mm is observed in the tail of the pancreas. Serosal invasion and retropancreatic tissue invasion are noted. Stenosis of the splenic artery is observed, suggesting invasion. Invasion into the left adrenal gland is also noted. No other local invasion factors are identified. Lymph node metastases are observed in three nodes at station 16b. No other metastases are observed.",
+  "responses": [
+    {
+      "type": "ai",
+      "content": "Task 1: Diagnose the local invasion factors of pancreatic cancer.\n\nCH0 (no invasion into the common hepatic artery)\nDU0 (no invasion into the duodenum)\nS1 (serosal invasion)\nRP1 (retropancreatic tissue invasion)\nPV0 (no invasion into the portal vein)\nA1 (invasion into the left adrenal gland)\nPL0 (no invasion into the portal lymph nodes)\nOO1 (obstruction of the splenic artery, suggesting invasion)\n\nTask 2: Determine the T classification of pancreatic cancer.\n\nBased on the size of the tumor (41 mm), it is classified as T1c.\n\nTask 3: Determine the N classification of pancreatic cancer.\n\nRegional lymph nodes for pancreatic cancer in the tail are:\n- Station 16 (splenic nodes)\n- Station 17 (coeliac nodes)\n- Station 18 (suprapancreatic nodes)\n\nThe patient's metastatic lymph node station is:\n- Station 16b\n\nSince only station 16b is regional, and there are 3 metastatic nodes, the N classification is N1b.\n\nTask 4: Determine the M classification of pancreatic cancer.\n\nNo distant metastases are observed, so the M classification is M0.\n\nTask 5: Determine the resectability classification of pancreatic cancer.\n\nBased on the presence of serosal invasion (S1) and invasion into the left adrenal gland (A1), the tumor is classified as Unresectable (UR).\n\nTask 6: Determine the overall stage according to the JPS staging system.\n\nBased on the T classification (T1c), N classification (N1b), and M classification (M0), the overall stage is Stage IIA.",
+      "additional_kwargs": {}
+    }
+  ],
+  "evaluations": {
+    "CH": {
+      "predicted": "CH0",
+      "ground truth": "CH0",
+      "matches": true
+    },
+    "DU": {
+      "predicted": "DU0",
+      "ground truth": "DU0",
+      "matches": true
+    },
+    "S": {
+      "predicted": "S1",
+      "ground truth": "S1",
+      "matches": true
+    },
+    "RP": {
+      "predicted": "RP1",
+      "ground truth": "RP1",
+      "matches": true
+    },
+    "PV": {
+      "predicted": "PV0",
+      "ground truth": "PV0",
+      "matches": true
+    },
+    "A": {
+      "predicted": "A1",
+      "ground truth": "A1",
+      "matches": true
+    },
+    "PL": {
+      "predicted": "PL0",
+      "ground truth": "PL0",
+      "matches": true
+    },
+    "OO": {
+      "predicted": "OO1",
+      "ground truth": "OO1",
+      "matches": true
+    },
+    "T": {
+      "predicted": "T1c",
+      "ground truth": "T3",
+      "matches": false
+    },
+    "N": {
+      "predicted": "N1b",
+      "ground truth": "N0",
+      "matches": false
+    },
+    "M": {
+      "predicted": "M0",
+      "ground truth": "M1",
+      "matches": false
+    },
+    "Resectability": {
+      "predicted": "UR",
+      "ground truth": "UR",
+      "matches": true
+    },
+    "Stage": {
+      "predicted": "Stage IIA",
+      "ground truth": "Stage IV",
+      "matches": false
+    }
+  },
+  "duration": 2.613408
+}

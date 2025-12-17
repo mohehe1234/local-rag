@@ -1,0 +1,175 @@
+{
+  "case_number": 82,
+  "findings": "An infiltrative pancreatic cancer measuring 63 mm is observed in the body of the pancreas. Serosal invasion and retropancreatic tissue invasion are noted. There is contact of more than 180\u00b0 with the superior mesenteric vein, suggesting invasion. No invasion beyond the inferior border of the duodenum is observed. Contact of less than 180\u00b0 with the celiac artery is noted, raising suspicion of invasion, although no deformation or stenosis of the celiac artery is observed. Additionally, there is contact of more than 180\u00b0 with the splenic artery, suggesting invasion. The tumor does not involve the common hepatic artery or the proper hepatic artery. No other local invasion factors are identified. Lymph node metastasis is observed in one node at station 10. No other metastases are observed.",
+  "responses": [
+    {
+      "type": "human",
+      "content": "Task 1: Diagnose the local invasion factors of pancreatic cancer (CH, DU, S, RP, PV, A, PL, OO), and respond in the format: e.g., 'CH0, DU1, S1, RP1, PV0, A0, PL0, OO1'.",
+      "additional_kwargs": {
+        "task_key": "Step_1"
+      }
+    },
+    {
+      "type": "ai",
+      "content": "CH0, DU0, S1, RP1, PV1, A1, PL0, OO0",
+      "additional_kwargs": {
+        "chunks": [
+          "6"
+        ]
+      }
+    },
+    {
+      "type": "human",
+      "content": "Task 2: Based on the answer to Task 1, determine the classification for local invasion (T classification) of pancreatic cancer (T0, Tis, T1a, T1b, T1c, T2, T3, T4). If both size-based (e.g., T1, T2) and extension-based (e.g., T3, T4) criteria are met, assign the higher T category reflecting greater invasion.",
+      "additional_kwargs": {
+        "task_key": "Step_2"
+      }
+    },
+    {
+      "type": "ai",
+      "content": "T3.\n\n**Rationale:**\n\nThe patient has a tumor measuring 63mm, which exceeds the 20mm threshold for T2 and falls into the size range considered for T3. The provided guideline states that T3 is defined as a tumor extending beyond the pancreas but *not* involving the celiac or superior mesenteric artery.\n\nThe Task 1 output (CH0, DU0, S1, RP1, PV1, A1, PL0, OO0) indicates serosal invasion (S1), retropancreatic invasion (RP1), and portal vein involvement (PV1). These findings confirm extension beyond the pancreas. While there is contact with the splenic artery (A1), the guideline does not define splenic artery involvement as a criterion for T4. The patient does not have invasion of the celiac artery or superior mesenteric artery. Therefore, based on the tumor size and the presence of extrapancreatic extension without arterial involvement, the appropriate T classification is T3.",
+      "additional_kwargs": {
+        "chunks": [
+          "5",
+          "15"
+        ]
+      }
+    },
+    {
+      "type": "human",
+      "content": "Task 3: Determine the N classification (N0, N1a, N1b) of pancreatic cancer. First, list the stations defined as regional lymph nodes based on the tumor location (head, body, or tail) according to the guideline. Then identify which of the patient\u2019s metastatic lymph node stations are regional, and exclude all others. Count only the metastatic lymph nodes\u2014not stations\u2014within the regional stations, and assign the N classification accordingly. Verify the total count of involved regional nodes.",
+      "additional_kwargs": {
+        "task_key": "Step_3"
+      }
+    },
+    {
+      "type": "ai",
+      "content": "N1a.\n\n**Rationale:**\n\n1. **Regional Lymph Node Identification:** The tumor is located in the body of the pancreas. According to the guideline, the regional lymph nodes for the body of the pancreas are 8a, 8p, 9, 10, 11p, 11d, and 14t.\n\n2. **Metastatic Node Location:** The patient has metastasis in station 10. Station 10 (lymph nodes at the splenic hilum) *is* a regional lymph node for the body of the pancreas.\n\n3. **Counting Metastatic Nodes:** There is metastasis in *one* regional lymph node (station 10).\n\n4. **N Classification:** According to the guideline, N1a is defined as metastasis in one to three regional lymph nodes. Since there is metastasis in one regional lymph node, the N classification is N1a.",
+      "additional_kwargs": {
+        "chunks": [
+          "12",
+          "10"
+        ]
+      }
+    },
+    {
+      "type": "human",
+      "content": "Task 4: Determine the M classification (M0 or M1) of pancreatic cancer, based on the presence or absence of distant metastases, such as to non-regional lymph nodes or distant organs. Do not confuse direct tumor invasion with distant metastasis.",
+      "additional_kwargs": {
+        "task_key": "Step_4"
+      }
+    },
+    {
+      "type": "ai",
+      "content": "M0.\n\n**Rationale:**\n\nThe provided guideline explicitly states that M1 is defined as metastasis found in a lymph node *other than* a regional lymph node. The patient has metastasis in station 10, which *is* a regional lymph node for the body of the pancreas (as listed in the guideline). There is no mention of metastasis to any distant organs or non-regional lymph nodes. Therefore, based on the provided guideline and patient information, the M classification is M0 (no distant metastasis).",
+      "additional_kwargs": {
+        "chunks": [
+          "12",
+          "5"
+        ]
+      }
+    },
+    {
+      "type": "human",
+      "content": "Task 5: Based on the results of Task 1 and Task 4, determine the resectability classification of pancreatic cancer as Resectable (R), Borderline Resectable (BR), or Unresectable (UR). Regional lymph node involvement does not qualify as distant or non-regional metastasis. If none of the criteria for BR or UR are met, classify as R.",
+      "additional_kwargs": {
+        "task_key": "Step_5"
+      }
+    },
+    {
+      "type": "ai",
+      "content": "BR-PV.\n\n**Rationale:**\n\nBased on the provided guideline and the patient information, the tumor has contact of more than 180\u00b0 with the superior mesenteric vein (SMV), fulfilling a criterion for borderline resectability. The guideline specifically defines BR-PV as tumor contact or invasion of the SMV/PV of 180\u00b0 or more, *without* findings of contact or invasion of the SMA, CA, or CHA. \n\nThe patient\u2019s case meets these criteria:\n\n*   **SMV/PV involvement:** >180\u00b0 contact with the SMV.\n*   **Arterial involvement:** No contact or invasion of the SMA, CA, or CHA is reported.\n\nTherefore, the resectability classification is BR-PV. The presence of regional lymph node metastasis (N1a) does *not* change the resectability classification, as the guideline states that distant metastasis is required for an Unresectable (UR) classification.",
+      "additional_kwargs": {
+        "chunks": [
+          "15",
+          "16"
+        ]
+      }
+    },
+    {
+      "type": "human",
+      "content": "Task 6: Based on the determined T, N, and M categories, classify the overall stage according to the JPS staging system. Output one of: Stage 0, Stage IA, Stage IB, Stage IIA, Stage IIB, Stage III, or Stage IV.",
+      "additional_kwargs": {
+        "task_key": "Step_6"
+      }
+    },
+    {
+      "type": "ai",
+      "content": "Stage IIB.\n\n**Rationale:**\n\nBased on the previous task outputs:\n\n*   **T category:** T3 (determined in Task 2)\n*   **N category:** N1 (N1a - one regional lymph node involved, determined in Task 3)\n*   **M category:** M0 (no distant metastasis, determined in Task 4)\n\nReferring to Table 3 in the provided guideline, a T3 tumor, N1 status, and M0 status corresponds to **Stage IIB**.",
+      "additional_kwargs": {
+        "chunks": [
+          "15",
+          "2"
+        ]
+      }
+    }
+  ],
+  "evaluations": {
+    "CH": {
+      "predicted": "CH0",
+      "ground truth": "CH0",
+      "matches": true
+    },
+    "DU": {
+      "predicted": "DU0",
+      "ground truth": "DU0",
+      "matches": true
+    },
+    "S": {
+      "predicted": "S1",
+      "ground truth": "S1",
+      "matches": true
+    },
+    "RP": {
+      "predicted": "RP1",
+      "ground truth": "RP1",
+      "matches": true
+    },
+    "PV": {
+      "predicted": "PV1",
+      "ground truth": "PV1",
+      "matches": true
+    },
+    "A": {
+      "predicted": "A1",
+      "ground truth": "A1",
+      "matches": true
+    },
+    "PL": {
+      "predicted": "PL0",
+      "ground truth": "PL0",
+      "matches": true
+    },
+    "OO": {
+      "predicted": "OO0",
+      "ground truth": "OO0",
+      "matches": true
+    },
+    "T": {
+      "predicted": "T3",
+      "ground truth": "T4",
+      "matches": false
+    },
+    "N": {
+      "predicted": "N1a",
+      "ground truth": "N1a",
+      "matches": true
+    },
+    "M": {
+      "predicted": "M0",
+      "ground truth": "M0",
+      "matches": true
+    },
+    "Resectability": {
+      "predicted": "BR",
+      "ground truth": "BR",
+      "matches": true
+    },
+    "Stage": {
+      "predicted": "Stage IIB",
+      "ground truth": "Stage III",
+      "matches": false
+    }
+  },
+  "duration": 43.617358
+}

@@ -1,0 +1,79 @@
+{
+  "case_number": 79,
+  "findings": "An infiltrative pancreatic cancer measuring 53 mm is observed in the head of the pancreas. Serosal invasion and retropancreatic tissue invasion are noted. No other local invasion factors are identified. Lymph node metastases are observed in one node at station 10 and two nodes at station 11p. No other evident metastases are observed.",
+  "responses": [
+    {
+      "type": "ai",
+      "content": "Task 1: CH0, DU0, S1, RP1, PV0, A0, PL0, OO0\n\nExplanation: Local invasion factors are identified as serosal invasion (S1) and retropancreatic tissue invasion (RP1).\n\nTask 2: T3\n\nExplanation: The tumor size is 53 mm, which corresponds to T3. There is no extension-based criterion that would indicate a higher T category.\n\nTask 3: N1b\n\nExplanation: Regional lymph nodes for pancreatic cancer in the head are stations 10, 11p, 12a, 12b, 13, 14, and 15. The patient's metastatic lymph nodes are at stations 10 and 11p, which are regional. There are 3 metastatic lymph nodes within the regional stations.\n\nTask 4: M0\n\nExplanation: There are no distant metastases observed.\n\nTask 5: R\n\nExplanation: The criteria for Borderline Resectable (BR) or Unresectable (UR) are not met. The tumor is resectable.\n\nTask 6: Stage IIA\n\nExplanation: Based on the determined T (T3), N (N1b), and M (M0) categories, the overall stage is Stage IIA.",
+      "additional_kwargs": {}
+    }
+  ],
+  "evaluations": {
+    "CH": {
+      "predicted": "CH0",
+      "ground truth": "CH0",
+      "matches": true
+    },
+    "DU": {
+      "predicted": "DU0",
+      "ground truth": "DU0",
+      "matches": true
+    },
+    "S": {
+      "predicted": "S1",
+      "ground truth": "S1",
+      "matches": true
+    },
+    "RP": {
+      "predicted": "RP1",
+      "ground truth": "RP1",
+      "matches": true
+    },
+    "PV": {
+      "predicted": "PV0",
+      "ground truth": "PV0",
+      "matches": true
+    },
+    "A": {
+      "predicted": "A0",
+      "ground truth": "A0",
+      "matches": true
+    },
+    "PL": {
+      "predicted": "PL0",
+      "ground truth": "PL0",
+      "matches": true
+    },
+    "OO": {
+      "predicted": "OO0",
+      "ground truth": "OO0",
+      "matches": true
+    },
+    "T": {
+      "predicted": "T3",
+      "ground truth": "T3",
+      "matches": true
+    },
+    "N": {
+      "predicted": "N1b",
+      "ground truth": "N0",
+      "matches": false
+    },
+    "M": {
+      "predicted": "M0",
+      "ground truth": "M1",
+      "matches": false
+    },
+    "Resectability": {
+      "predicted": "R",
+      "ground truth": "UR",
+      "matches": false
+    },
+    "Stage": {
+      "predicted": "Stage IIA",
+      "ground truth": "Stage IV",
+      "matches": false
+    }
+  },
+  "duration": 2.015884
+}

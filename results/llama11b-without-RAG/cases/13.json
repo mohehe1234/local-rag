@@ -1,0 +1,79 @@
+{
+  "case_number": 13,
+  "findings": "A pancreatic cancer measuring 59 mm is observed in the head of the pancreas. The tumor invades duodenum and causes duodenal stenosis. Serosal invasion and retropancreatic tissue invasion are noted. There is contact of more than 180\u00b0 with the portal vein and superior mesenteric vein, accompanied by vascular stenosis, raising suspicion of invasion. No invasion beyond the inferior border of the duodenum is observed. The tumor also invades the right renal vein. No other local invasion factors are identified. Lymph node metastases are observed in one node at station 11p, three nodes at station 14t, two nodes at station 16a, and three nodes at station 16b. No other metastases are observed.",
+  "responses": [
+    {
+      "type": "ai",
+      "content": "Task 1: Diagnose the local invasion factors of pancreatic cancer.\n\nCH0 (no invasion of the common bile duct)\nDU1 (invasion of the duodenum)\nS1 (serosal invasion)\nRP1 (retropancreatic tissue invasion)\nPV1 (portal vein invasion)\nA1 (arterial invasion, likely referring to the right renal vein invasion)\nPL0 (no invasion of the pancreatic lymphatic vessels)\nOO1 (invasion of the duodenum, which is considered an extrapancreatic organ)\n\nTask 2: Determine the classification for local invasion (T classification) of pancreatic cancer.\n\nBased on the size of the tumor (59 mm) and the extent of local invasion, the T classification is T3.\n\nTask 3: Determine the N classification of pancreatic cancer.\n\nRegional lymph nodes for pancreatic cancer are defined as follows:\n- Head: stations 11p, 12a, 12b, 13, 14, 15, 16a, 16b, 16c, 17, 18, 19\n- Body: stations 8a, 8p, 9, 10, 11p, 12a, 12b, 13, 14, 15, 16a, 16b, 16c, 17, 18, 19\n- Tail: stations 8a, 8p, 9, 10, 11p, 12a, 12b, 13, 14, 15, 16a, 16b, 16c, 17, 18, 19\n\nThe patient's metastatic lymph node stations are 11p, 14t, 16a, and 16b. These are regional lymph nodes for a pancreatic cancer located in the head.\n\nCounting only the metastatic lymph nodes within the regional stations, there are 8 metastatic lymph nodes (1 at station 11p, 3 at station 14t, 2 at station 16a, and 3 at station 16b).\n\nThe N classification is N1b.\n\nTask 4: Determine the M classification of pancreatic cancer.\n\nThere are no distant metastases observed in the image findings. The lymph node metastases are regional and do not qualify as distant or non-regional metastasis.\n\nThe M classification is M0.\n\nTask 5: Determine the resectability classification of pancreatic cancer.\n\nBased on the results of Task 1 and Task 4, the tumor is not unresectable due to distant or non-regional metastasis. The tumor is also not borderline resectable due to the presence of regional lymph node metastasis. Therefore, the tumor is resectable.\n\nTask 6: Determine the overall stage according to the JPS staging system.\n\nBased on the determined T, N, and M categories, the overall stage is Stage III.",
+      "additional_kwargs": {}
+    }
+  ],
+  "evaluations": {
+    "CH": {
+      "predicted": "CH0",
+      "ground truth": "CH0",
+      "matches": true
+    },
+    "DU": {
+      "predicted": "DU1",
+      "ground truth": "DU1",
+      "matches": true
+    },
+    "S": {
+      "predicted": "S1",
+      "ground truth": "S1",
+      "matches": true
+    },
+    "RP": {
+      "predicted": "RP1",
+      "ground truth": "RP1",
+      "matches": true
+    },
+    "PV": {
+      "predicted": "PV1",
+      "ground truth": "PV1",
+      "matches": true
+    },
+    "A": {
+      "predicted": "A1",
+      "ground truth": "A0",
+      "matches": false
+    },
+    "PL": {
+      "predicted": "PL0",
+      "ground truth": "PL0",
+      "matches": true
+    },
+    "OO": {
+      "predicted": "OO1",
+      "ground truth": "OO1",
+      "matches": true
+    },
+    "T": {
+      "predicted": "T3",
+      "ground truth": "T3",
+      "matches": true
+    },
+    "N": {
+      "predicted": "N1b",
+      "ground truth": "N1a",
+      "matches": false
+    },
+    "M": {
+      "predicted": "M0",
+      "ground truth": "M1",
+      "matches": false
+    },
+    "Resectability": {
+      "predicted": "R",
+      "ground truth": "UR",
+      "matches": false
+    },
+    "Stage": {
+      "predicted": "Stage III",
+      "ground truth": "Stage IV",
+      "matches": false
+    }
+  },
+  "duration": 4.408411
+}

@@ -1,0 +1,79 @@
+{
+  "case_number": 71,
+  "findings": "An infiltrative pancreatic cancer measuring 37 mm is observed in the body of the pancreas. Serosal invasion and retropancreatic tissue invasion are noted. There is contact of more than 180\u00b0 with both the superior mesenteric vein and the splenic vein, suggesting invasion. No invasion beyond the inferior border of the duodenum is observed. No other local invasion factors are identified. Lymph node metastases are observed in two nodes each at stations 8a and 11p. Multiple nodules are observed in the peritoneal cavity, raising suspicion of peritoneal metastasis.",
+  "responses": [
+    {
+      "type": "ai",
+      "content": "Task 1: CH0, DU0, S1, RP1, PV1, A0, PL0, OO1\n\nExplanation: \n- CH: 0 (no involvement of the celiac trunk)\n- DU: 0 (no involvement of the duodenum)\n- S: 1 (serosal invasion)\n- RP: 1 (retropancreatic tissue invasion)\n- PV: 1 (invasion of the portal vein)\n- A: 0 (no involvement of the abdominal aorta)\n- PL: 0 (no involvement of the pancreatic lymphatic vessels)\n- OO: 1 (involvement of other organs, peritoneal metastasis)\n\nTask 2: T3\n\nExplanation: \n- The tumor is 37 mm in size, which is greater than 15 mm but less than 20 mm, placing it in the T1 category based on size.\n- However, the tumor has invaded the serosa and the retropancreatic tissue, and has contact with both the superior mesenteric vein and the splenic vein, which places it in the T3 category based on extension.\n\nTask 3: N1b\n\nExplanation: \n- Regional lymph nodes for pancreatic cancer in the body of the pancreas include stations 8a, 8p, 9, 11p, and 12a.\n- The patient has metastatic lymph nodes in stations 8a and 11p, which are regional.\n- Counting only the metastatic lymph nodes within the regional stations, there are 2 nodes in station 8a and 2 nodes in station 11p, for a total of 4 nodes.\n- Therefore, the N classification is N1b.\n\nTask 4: M1\n\nExplanation: \n- The presence of multiple nodules in the peritoneal cavity raises suspicion of peritoneal metastasis, which is a distant metastasis.\n\nTask 5: Unresectable (UR)\n\nExplanation: \n- The tumor has invaded the serosa and the retropancreatic tissue, and has contact with both the superior mesenteric vein and the splenic vein, which makes it unresectable.\n- The presence of distant metastasis (peritoneal metastasis) also makes the tumor unresectable.\n\nTask 6: Stage IV\n\nExplanation: \n- The tumor is classified as T3, N1b, and M1, which corresponds to Stage IV according to the JPS staging system.",
+      "additional_kwargs": {}
+    }
+  ],
+  "evaluations": {
+    "CH": {
+      "predicted": "CH0",
+      "ground truth": "CH0",
+      "matches": true
+    },
+    "DU": {
+      "predicted": "DU0",
+      "ground truth": "DU0",
+      "matches": true
+    },
+    "S": {
+      "predicted": "S1",
+      "ground truth": "S1",
+      "matches": true
+    },
+    "RP": {
+      "predicted": "RP1",
+      "ground truth": "RP1",
+      "matches": true
+    },
+    "PV": {
+      "predicted": "PV1",
+      "ground truth": "PV1",
+      "matches": true
+    },
+    "A": {
+      "predicted": "A0",
+      "ground truth": "A0",
+      "matches": true
+    },
+    "PL": {
+      "predicted": "PL0",
+      "ground truth": "PL0",
+      "matches": true
+    },
+    "OO": {
+      "predicted": "OO1",
+      "ground truth": "OO0",
+      "matches": false
+    },
+    "T": {
+      "predicted": "T3",
+      "ground truth": "T3",
+      "matches": true
+    },
+    "N": {
+      "predicted": "N1b",
+      "ground truth": "N1b",
+      "matches": true
+    },
+    "M": {
+      "predicted": "M1",
+      "ground truth": "M1",
+      "matches": true
+    },
+    "Resectability": {
+      "predicted": "UR",
+      "ground truth": "UR",
+      "matches": true
+    },
+    "Stage": {
+      "predicted": "Stage IV",
+      "ground truth": "Stage IV",
+      "matches": true
+    }
+  },
+  "duration": 3.74551
+}

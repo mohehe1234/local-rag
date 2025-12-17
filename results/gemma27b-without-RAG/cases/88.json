@@ -1,0 +1,79 @@
+{
+  "case_number": 88,
+  "findings": "An infiltrative pancreatic cancer measuring 58 mm is observed in the head of the pancreas. Serosal invasion and retropancreatic tissue invasion are noted. There is contact of more than 180\u00b0 with the common hepatic artery, suggesting invasion, though the tumor does not involve the proper hepatic artery or the celiac artery. No other local invasion factors are identified. No lymph node metastases are present. No other metastases are observed.",
+  "responses": [
+    {
+      "type": "ai",
+      "content": "Okay, I will perform the requested tasks based strictly on the provided image findings and the implicit JPS staging guideline.\n\n**Task 1: Diagnose the local invasion factors**\n\nBased on the findings:\n*   **CH**1 (Contact of more than 180\u00b0 with the common hepatic artery)\n*   **DU**0 (Duodenal invasion not identified)\n*   **S**1 (Serosal invasion)\n*   **RP**1 (Retropancreatic tissue invasion)\n*   **PV**0 (Portal vein invasion not identified)\n*   **A**0 (Artery involvement - proper hepatic artery or celiac artery - not identified)\n*   **PL**0 (Peripancreatic lymph node invasion not identified)\n*   **OO**0 (Other organs invasion not identified)\n\n**Response:** CH1, DU0, S1, RP1, PV0, A0, PL0, OO0\n\n**Task 2: Determine the T classification**\n\nThe tumor size is 58mm, which would typically classify as T2. However, serosal invasion (S1) and retropancreatic invasion (RP1) are present. Given these findings, the T classification is T3.\n\n**Response:** T3\n\n**Task 3: Determine the N classification**\n\nThe tumor is located in the head of the pancreas. Regional lymph nodes for the pancreatic head are:\n*   Peri-pancreatic lymph nodes\n*   Superior mesenteric lymph nodes\n*   Para-aortic lymph nodes\n*   Common hepatic artery lymph nodes\n\nThe image findings state \"No lymph node metastases are present.\" Therefore, N0.\n\n**Response:** N0\n\n**Task 4: Determine the M classification**\n\nThe image findings state \"No other metastases are observed.\" Therefore, M0.\n\n**Response:** M0\n\n**Task 5: Determine the resectability classification**\n\nBased on the local invasion factors (CH1, S1, RP1) and the absence of distant metastasis (M0), the cancer is classified as Borderline Resectable (BR).\n\n**Response:** BR\n\n**Task 6: Determine the overall stage**\n\nBased on the JPS staging system, with T3, N0, and M0, the overall stage is Stage IIB.\n\n**Response:** Stage IIB\n\n\n\n",
+      "additional_kwargs": {}
+    }
+  ],
+  "evaluations": {
+    "CH": {
+      "predicted": "CH1",
+      "ground truth": "CH0",
+      "matches": false
+    },
+    "DU": {
+      "predicted": "DU0",
+      "ground truth": "DU0",
+      "matches": true
+    },
+    "S": {
+      "predicted": "S1",
+      "ground truth": "S1",
+      "matches": true
+    },
+    "RP": {
+      "predicted": "RP1",
+      "ground truth": "RP1",
+      "matches": true
+    },
+    "PV": {
+      "predicted": "PV0",
+      "ground truth": "PV0",
+      "matches": true
+    },
+    "A": {
+      "predicted": "A0",
+      "ground truth": "A1",
+      "matches": false
+    },
+    "PL": {
+      "predicted": "PL0",
+      "ground truth": "PL0",
+      "matches": true
+    },
+    "OO": {
+      "predicted": "OO0",
+      "ground truth": "OO0",
+      "matches": true
+    },
+    "T": {
+      "predicted": "T3",
+      "ground truth": "T3",
+      "matches": true
+    },
+    "N": {
+      "predicted": "N0",
+      "ground truth": "N0",
+      "matches": true
+    },
+    "M": {
+      "predicted": "M0",
+      "ground truth": "M0",
+      "matches": true
+    },
+    "Resectability": {
+      "predicted": "BR",
+      "ground truth": "BR",
+      "matches": true
+    },
+    "Stage": {
+      "predicted": "Stage IIB",
+      "ground truth": "Stage IIA",
+      "matches": false
+    }
+  },
+  "duration": 11.641398
+}

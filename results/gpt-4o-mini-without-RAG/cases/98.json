@@ -1,0 +1,81 @@
+{
+  "case_number": 98,
+  "findings": "An infiltrative pancreatic cancer measuring 41 mm is observed in the tail of the pancreas. Serosal invasion and retropancreatic tissue invasion are noted. Stenosis of the splenic artery is observed, suggesting invasion. Invasion into the left adrenal gland is also noted. No other local invasion factors are identified. Lymph node metastases are observed in three nodes at station 16b. No other metastases are observed.",
+  "responses": [
+    {
+      "type": "ai",
+      "content": "Task 1: CH0, DU0, S1, RP1, PV0, A1, PL0, OO1\n\nTask 2: T3\n\nTask 3: Regional lymph nodes for the tail of the pancreas are: 8a, 9, 10, 11p, 11d, 18. The patient has metastatic lymph nodes at station 16b, which is not a regional lymph node. Therefore, there are no metastatic regional lymph nodes. N0\n\nTask 4: M0\n\nTask 5: R (Resectable)\n\nTask 6: Stage IIA",
+      "additional_kwargs": {
+        "refusal": null
+      }
+    }
+  ],
+  "evaluations": {
+    "CH": {
+      "predicted": "CH0",
+      "ground truth": "CH0",
+      "matches": true
+    },
+    "DU": {
+      "predicted": "DU0",
+      "ground truth": "DU0",
+      "matches": true
+    },
+    "S": {
+      "predicted": "S1",
+      "ground truth": "S1",
+      "matches": true
+    },
+    "RP": {
+      "predicted": "RP1",
+      "ground truth": "RP1",
+      "matches": true
+    },
+    "PV": {
+      "predicted": "PV0",
+      "ground truth": "PV0",
+      "matches": true
+    },
+    "A": {
+      "predicted": "A1",
+      "ground truth": "A1",
+      "matches": true
+    },
+    "PL": {
+      "predicted": "PL0",
+      "ground truth": "PL0",
+      "matches": true
+    },
+    "OO": {
+      "predicted": "OO1",
+      "ground truth": "OO1",
+      "matches": true
+    },
+    "T": {
+      "predicted": "T3",
+      "ground truth": "T3",
+      "matches": true
+    },
+    "N": {
+      "predicted": "N0",
+      "ground truth": "N0",
+      "matches": true
+    },
+    "M": {
+      "predicted": "M0",
+      "ground truth": "M1",
+      "matches": false
+    },
+    "Resectability": {
+      "predicted": "R",
+      "ground truth": "UR",
+      "matches": false
+    },
+    "Stage": {
+      "predicted": "Stage IIA",
+      "ground truth": "Stage IV",
+      "matches": false
+    }
+  },
+  "duration": 4.73065
+}

@@ -1,0 +1,176 @@
+{
+  "case_number": 96,
+  "findings": "An infiltrative pancreatic cancer measuring 52 mm is observed in the head of the pancreas. Serosal invasion and retropancreatic tissue invasion are noted. There is contact of more than 180\u00b0 with both the portal vein and the superior mesenteric vein, along with vascular stenosis, suggesting invasion. No invasion beyond the inferior border of the duodenum is observed. No other local invasion factors are identified. No lymph node metastases are present. No other metastases are observed.",
+  "responses": [
+    {
+      "type": "human",
+      "content": "Task 1: Diagnose the local invasion factors of pancreatic cancer (CH, DU, S, RP, PV, A, PL, OO), and respond in the format: e.g., 'CH0, DU1, S1, RP1, PV0, A0, PL0, OO1'.",
+      "additional_kwargs": {
+        "task_key": "Step_1"
+      }
+    },
+    {
+      "type": "ai",
+      "content": "Based on the provided guideline and patient information, the local invasion factors of pancreatic cancer are as follows:\n\nCH0 (bile duct invasion: absent)\nDU0 (duodenal invasion: absent)\nS1 (serosal invasion: present)\nRP1 (retropancreatic tissue invasion: present)\nPV1 (portal venous system invasion: present)\nA0 (arterial system invasion: absent)\nPL0 (extrapancreatic nerve plexus invasion: absent)\nOO0 (invasion of other organs: absent)\n\nTherefore, the response is: CH0, DU0, S1, RP1, PV1, A0, PL0, OO0",
+      "additional_kwargs": {
+        "chunks": [
+          "5",
+          "6"
+        ]
+      }
+    },
+    {
+      "type": "human",
+      "content": "Task 2: Based on the answer to Task 1, determine the classification for local invasion (T classification) of pancreatic cancer (T0, Tis, T1a, T1b, T1c, T2, T3, T4). If both size-based (e.g., T1, T2) and extension-based (e.g., T3, T4) criteria are met, assign the higher T category reflecting greater invasion.",
+      "additional_kwargs": {
+        "task_key": "Step_2"
+      }
+    },
+    {
+      "type": "ai",
+      "content": "Based on the provided guideline and patient information, the classification for local invasion (T classification) of pancreatic cancer is as follows:\n\nThe tumor size is 52 mm, which is greater than 20 mm in the largest diameter, so it falls under T2.\n\nHowever, the tumor also extends beyond the pancreas with serosal invasion and retropancreatic tissue invasion, and there is contact of more than 180\u00b0 with both the portal vein and the superior mesenteric vein, along with vascular stenosis, suggesting invasion. This meets the criteria for T3.\n\nSince both size-based (T2) and extension-based (T3) criteria are met, the higher T category reflecting greater invasion is T3.\n\nTherefore, the response is: T3",
+      "additional_kwargs": {
+        "chunks": [
+          "5",
+          "15"
+        ]
+      }
+    },
+    {
+      "type": "human",
+      "content": "Task 3: Determine the N classification (N0, N1a, N1b) of pancreatic cancer. First, list the stations defined as regional lymph nodes based on the tumor location (head, body, or tail) according to the guideline. Then identify which of the patient\u2019s metastatic lymph node stations are regional, and exclude all others. Count only the metastatic lymph nodes\u2014not stations\u2014within the regional stations, and assign the N classification accordingly. Verify the total count of involved regional nodes.",
+      "additional_kwargs": {
+        "task_key": "Step_3"
+      }
+    },
+    {
+      "type": "ai",
+      "content": "Based on the provided guideline and patient information, the classification for lymph node metastases (N classification) of pancreatic cancer is as follows:\n\nThe patient has an infiltrative pancreatic cancer located in the head of the pancreas. According to the guideline, the regional lymph nodes for the head of the pancreas are:\n\n* 6\n* 8a\n* 8p\n* 12a\n* 12b\n* 12p\n* 13\n* 14t\n* 17\n\nThe patient's metastatic lymph node stations are not specified. However, since no lymph node metastases are present, the N classification is:\n\nN0: No regional lymph node metastasis\n\nTherefore, the response is: N0",
+      "additional_kwargs": {
+        "chunks": [
+          "9",
+          "12"
+        ]
+      }
+    },
+    {
+      "type": "human",
+      "content": "Task 4: Determine the M classification (M0 or M1) of pancreatic cancer, based on the presence or absence of distant metastases, such as to non-regional lymph nodes or distant organs. Do not confuse direct tumor invasion with distant metastasis.",
+      "additional_kwargs": {
+        "task_key": "Step_4"
+      }
+    },
+    {
+      "type": "ai",
+      "content": "Based on the provided guideline and patient information, the classification for distant metastases (M classification) of pancreatic cancer is as follows:\n\nThe patient has an infiltrative pancreatic cancer located in the head of the pancreas, with a size of 52 mm. Serosal invasion and retropancreatic tissue invasion are noted, but no invasion beyond the inferior border of the duodenum is observed. No lymph node metastases are present, and no other metastases are observed.\n\nAccording to the guideline, the regional lymph nodes for the head of the pancreas are:\n\n* 6\n* 8a\n* 8p\n* 12a\n* 12b\n* 12p\n* 13\n* 14t\n* 17\n\nNo lymph node metastases are present, so the N classification is N0.\n\nThe patient does not have any distant metastases, such as to non-regional lymph nodes or distant organs. Therefore, the M classification is:\n\nM0: No distant metastasis\n\nTherefore, the response is: M0",
+      "additional_kwargs": {
+        "chunks": [
+          "5",
+          "12"
+        ]
+      }
+    },
+    {
+      "type": "human",
+      "content": "Task 5: Based on the results of Task 1 and Task 4, determine the resectability classification of pancreatic cancer as Resectable (R), Borderline Resectable (BR), or Unresectable (UR). Regional lymph node involvement does not qualify as distant or non-regional metastasis. If none of the criteria for BR or UR are met, classify as R.",
+      "additional_kwargs": {
+        "task_key": "Step_5"
+      }
+    },
+    {
+      "type": "ai",
+      "content": "Based on the provided guideline and patient information, the resectability classification of pancreatic cancer is as follows:\n\nThe patient has an infiltrative pancreatic cancer located in the head of the pancreas, with a size of 52 mm. Serosal invasion and retropancreatic tissue invasion are noted. There is contact of more than 180\u00b0 with both the portal vein and the superior mesenteric vein, along with vascular stenosis, suggesting invasion. No invasion beyond the inferior border of the duodenum is observed.\n\nAccording to the guideline, the patient meets the criteria for Borderline Resectable (BR) due to the following:\n\n* Tumor contact or invasion of the SMV/PV of 180\u00b0 or more, or occlusion of the SMV/PV, not exceeding the inferior border of the duodenum (BR-PV).\n\nThe patient does not meet the criteria for Unresectable (UR) because there is no distant metastasis.\n\nTherefore, the resectability classification is:\n\nBR-PV: Borderline Resectable (PV invasion alone)\n\nTherefore, the response is: BR-PV",
+      "additional_kwargs": {
+        "chunks": [
+          "15",
+          "16"
+        ]
+      }
+    },
+    {
+      "type": "human",
+      "content": "Task 6: Based on the determined T, N, and M categories, classify the overall stage according to the JPS staging system. Output one of: Stage 0, Stage IA, Stage IB, Stage IIA, Stage IIB, Stage III, or Stage IV.",
+      "additional_kwargs": {
+        "task_key": "Step_6"
+      }
+    },
+    {
+      "type": "ai",
+      "content": "Based on the provided guideline and patient information, the classification for the overall stage according to the JPS staging system is as follows:\n\nThe patient has an infiltrative pancreatic cancer located in the head of the pancreas, with a size of 52 mm. Serosal invasion and retropancreatic tissue invasion are noted. There is contact of more than 180\u00b0 with both the portal vein and the superior mesenteric vein, along with vascular stenosis, suggesting invasion. No invasion beyond the inferior border of the duodenum is observed. No lymph node metastases are present. No other metastases are observed.\n\nThe T classification is T3, the N classification is N0, and the M classification is M0.\n\nAccording to the JPS staging system, the patient meets the criteria for Stage III because the T classification is T3 and the M classification is M0.\n\nTherefore, the overall stage is:\n\nStage III: Borderline resectable or locally advanced pancreatic cancer for which neoadjuvant therapy may be recommended.\n\nTherefore, the response is: Stage III",
+      "additional_kwargs": {
+        "chunks": [
+          "15",
+          "14"
+        ]
+      }
+    }
+  ],
+  "evaluations": {
+    "CH": {
+      "predicted": "CH0",
+      "ground truth": "CH0",
+      "matches": true
+    },
+    "DU": {
+      "predicted": "DU0",
+      "ground truth": "DU0",
+      "matches": true
+    },
+    "S": {
+      "predicted": "S1",
+      "ground truth": "S1",
+      "matches": true
+    },
+    "RP": {
+      "predicted": "RP1",
+      "ground truth": "RP1",
+      "matches": true
+    },
+    "PV": {
+      "predicted": "PV1",
+      "ground truth": "PV1",
+      "matches": true
+    },
+    "A": {
+      "predicted": "A0",
+      "ground truth": "A0",
+      "matches": true
+    },
+    "PL": {
+      "predicted": "PL0",
+      "ground truth": "PL0",
+      "matches": true
+    },
+    "OO": {
+      "predicted": "OO0",
+      "ground truth": "OO0",
+      "matches": true
+    },
+    "T": {
+      "predicted": "T3",
+      "ground truth": "T3",
+      "matches": true
+    },
+    "N": {
+      "predicted": "N0",
+      "ground truth": "N0",
+      "matches": true
+    },
+    "M": {
+      "predicted": "M0",
+      "ground truth": "M0",
+      "matches": true
+    },
+    "Resectability": {
+      "predicted": "BR",
+      "ground truth": "BR",
+      "matches": true
+    },
+    "Stage": {
+      "predicted": "Stage III",
+      "ground truth": "Stage IIA",
+      "matches": false
+    }
+  },
+  "duration": 16.020621
+}

@@ -1,0 +1,81 @@
+{
+  "case_number": 66,
+  "findings": "An infiltrative pancreatic cancer measuring 47 mm is observed in the head of the pancreas. The common bile duct is interrupted by the tumor, suggesting invasion. The tumor is extensively in contact with the duodenum, causing duodenal stenosis, and duodenal invasion is suspected. Serosal invasion and retropancreatic tissue invasion are noted. There is contact of more than 180\u00b0 with the superior mesenteric vein, suggesting invasion. No invasion beyond the inferior border of the duodenum is observed. Contact of more than 180\u00b0 with the superior mesenteric artery, celiac artery, and common hepatic artery is observed, suggesting invasion. No other local invasion factors are identified. No lymph node metastases are present. No other metastases are observed.",
+  "responses": [
+    {
+      "type": "ai",
+      "content": "Task 1: CH1, DU1, S1, RP1, PV1, A1, PL0, OO0\n\nTask 2: T4\n\nTask 3: Regional lymph nodes for the head: 6, 8a, 8p, 12a, 12b, 12p, 13, 14t, 17. No metastatic lymph nodes are present. N0\n\nTask 4: M0\n\nTask 5: R\n\nTask 6: Stage IIA",
+      "additional_kwargs": {
+        "refusal": null
+      }
+    }
+  ],
+  "evaluations": {
+    "CH": {
+      "predicted": "CH1",
+      "ground truth": "CH1",
+      "matches": true
+    },
+    "DU": {
+      "predicted": "DU1",
+      "ground truth": "DU1",
+      "matches": true
+    },
+    "S": {
+      "predicted": "S1",
+      "ground truth": "S1",
+      "matches": true
+    },
+    "RP": {
+      "predicted": "RP1",
+      "ground truth": "RP1",
+      "matches": true
+    },
+    "PV": {
+      "predicted": "PV1",
+      "ground truth": "PV1",
+      "matches": true
+    },
+    "A": {
+      "predicted": "A1",
+      "ground truth": "A1",
+      "matches": true
+    },
+    "PL": {
+      "predicted": "PL0",
+      "ground truth": "PL0",
+      "matches": true
+    },
+    "OO": {
+      "predicted": "OO0",
+      "ground truth": "OO0",
+      "matches": true
+    },
+    "T": {
+      "predicted": "T4",
+      "ground truth": "T4",
+      "matches": true
+    },
+    "N": {
+      "predicted": "N0",
+      "ground truth": "N0",
+      "matches": true
+    },
+    "M": {
+      "predicted": "M0",
+      "ground truth": "M0",
+      "matches": true
+    },
+    "Resectability": {
+      "predicted": "R",
+      "ground truth": "UR",
+      "matches": false
+    },
+    "Stage": {
+      "predicted": "Stage IIA",
+      "ground truth": "Stage III",
+      "matches": false
+    }
+  },
+  "duration": 2.693085
+}

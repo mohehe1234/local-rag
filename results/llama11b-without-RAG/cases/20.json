@@ -1,0 +1,79 @@
+{
+  "case_number": 20,
+  "findings": "An infiltrative pancreatic cancer measuring 54 mm is observed in the tail of the pancreas. Serosal invasion is noted. The splenic vein is obstructed by the tumor, suggesting invasion. Stenosis of the splenic artery is noted, raising suspicion of invasion. The tumor is in contact with the stomach, with an indistinct boundary, indicating invasion. No other local invasion factors are identified. No lymph node metastases are present. A hypodense mass is observed in the left lobe of the liver, raising suspicion of liver metastasis.",
+  "responses": [
+    {
+      "type": "ai",
+      "content": "Task 1: Diagnose the local invasion factors of pancreatic cancer.\n\nBased on the image findings, the local invasion factors are:\n\n* S1 (serosal invasion)\n* PV1 (portal vein invasion, suggested by splenic vein obstruction)\n* A1 (arterial invasion, suggested by splenic artery stenosis)\n* CH1 (contact with stomach, indicating invasion)\n* PL0 (no peripancreatic lymph node metastasis)\n* OO0 (no omental metastasis)\n* RP0 (no retroperitoneal lymph node metastasis)\n* DU0 (no duodenal invasion)\n* PV0 (no portal vein invasion, but PV1 is already assigned)\n* A0 (no arterial invasion, but A1 is already assigned)\n* S0 (no serosal invasion, but S1 is already assigned)\n* CH0 (no contact with stomach, but CH1 is already assigned)\n\nSo, the answer is: S1, PV1, A1, CH1, PL0, OO0, RP0, DU0.\n\nTask 2: Determine the classification for local invasion (T classification) of pancreatic cancer.\n\nBased on the answer to Task 1, the T classification is T3, as the tumor has invaded the portal vein and the stomach, and has also invaded the serosa.\n\nTask 3: Determine the N classification of pancreatic cancer.\n\nThe regional lymph nodes for pancreatic cancer are:\n\n* Station 12 (peripancreatic lymph nodes)\n* Station 13 (coeliac lymph nodes)\n* Station 14 (supraclavicular lymph nodes)\n\nThere are no metastatic lymph nodes in the regional stations, so the N classification is N0.\n\nTask 4: Determine the M classification of pancreatic cancer.\n\nThere is a hypodense mass in the left lobe of the liver, raising suspicion of liver metastasis. This is a distant metastasis, so the M classification is M1.\n\nTask 5: Determine the resectability classification of pancreatic cancer.\n\nBased on the results of Task 1 and Task 4, the tumor is unresectable due to distant metastasis (M1).\n\nTask 6: Determine the overall stage according to the JPS staging system.\n\nBased on the determined T, N, and M categories, the overall stage is Stage IV.",
+      "additional_kwargs": {}
+    }
+  ],
+  "evaluations": {
+    "CH": {
+      "predicted": "CH1",
+      "ground truth": "CH0",
+      "matches": false
+    },
+    "DU": {
+      "predicted": "DU0",
+      "ground truth": "DU0",
+      "matches": true
+    },
+    "S": {
+      "predicted": "S1",
+      "ground truth": "S1",
+      "matches": true
+    },
+    "RP": {
+      "predicted": "RP0",
+      "ground truth": "RP0",
+      "matches": true
+    },
+    "PV": {
+      "predicted": "PV1",
+      "ground truth": "PV1",
+      "matches": true
+    },
+    "A": {
+      "predicted": "A1",
+      "ground truth": "A1",
+      "matches": true
+    },
+    "PL": {
+      "predicted": "PL0",
+      "ground truth": "PL0",
+      "matches": true
+    },
+    "OO": {
+      "predicted": "OO0",
+      "ground truth": "OO1",
+      "matches": false
+    },
+    "T": {
+      "predicted": "T3",
+      "ground truth": "T3",
+      "matches": true
+    },
+    "N": {
+      "predicted": "N0",
+      "ground truth": "N0",
+      "matches": true
+    },
+    "M": {
+      "predicted": "M1",
+      "ground truth": "M1",
+      "matches": true
+    },
+    "Resectability": {
+      "predicted": "UR",
+      "ground truth": "UR",
+      "matches": true
+    },
+    "Stage": {
+      "predicted": "Stage IV",
+      "ground truth": "Stage IV",
+      "matches": true
+    }
+  },
+  "duration": 3.513384
+}

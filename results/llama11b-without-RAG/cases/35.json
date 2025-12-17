@@ -1,0 +1,79 @@
+{
+  "case_number": 35,
+  "findings": "An infiltrative pancreatic cancer measuring 54 mm is observed in the tail of the pancreas. Serosal invasion and retropancreatic tissue invasion are noted. There is contact of more than 180\u00b0 with both the splenic vein and splenic artery, suggesting invasion. Prominent soft tissue shadows around the vessels raise suspicion of extrapancreatic nerve plexus invasion. No other local invasion factors are identified. Lymph node metastases are observed in two nodes at station 6 and two nodes at station 13. No other evident metastases are observed.",
+  "responses": [
+    {
+      "type": "ai",
+      "content": "Task 1: Diagnose the local invasion factors of pancreatic cancer.\n\nBased on the image findings, the local invasion factors are:\n\n* S1 (serosal invasion)\n* RP1 (retropancreatic tissue invasion)\n* PV1 (invasion of splenic vein)\n* A1 (invasion of splenic artery)\n* PL1 (extrapancreatic nerve plexus invasion)\n* OO1 (contact of more than 180\u00b0 with both the splenic vein and splenic artery)\n\nTask 2: Determine the T classification of pancreatic cancer.\n\nBased on the size of the tumor (54 mm) and the local invasion factors, the T classification is T3.\n\nTask 3: Determine the N classification of pancreatic cancer.\n\nThe regional lymph nodes for pancreatic cancer in the tail are:\n\n* Station 6 (left gastric artery)\n* Station 7 (common hepatic artery)\n* Station 8 (proper hepatic artery)\n* Station 9 (gastroduodenal artery)\n* Station 10 (common bile duct)\n* Station 11 (cystic duct)\n* Station 12 (hilar lymph nodes)\n* Station 13 (splenic artery)\n\nThe patient's metastatic lymph node stations are:\n\n* Station 6\n* Station 13\n\nBoth of these stations are regional. Counting only the metastatic lymph nodes within the regional stations, there are 4 involved regional nodes.\n\nThe N classification is N1b.\n\nTask 4: Determine the M classification of pancreatic cancer.\n\nThere are no distant metastases observed, so the M classification is M0.\n\nTask 5: Determine the resectability classification of pancreatic cancer.\n\nBased on the local invasion factors, the tumor is not unresectable. However, the presence of regional lymph node involvement (N1b) does not qualify as distant or non-regional metastasis, so the tumor is not borderline unresectable. Therefore, the resectability classification is Resectable (R).\n\nTask 6: Determine the overall stage according to the JPS staging system.\n\nBased on the T classification (T3), N classification (N1b), and M classification (M0), the overall stage is Stage III.",
+      "additional_kwargs": {}
+    }
+  ],
+  "evaluations": {
+    "CH": {
+      "predicted": "CH0",
+      "ground truth": "CH0",
+      "matches": true
+    },
+    "DU": {
+      "predicted": "DU0",
+      "ground truth": "DU0",
+      "matches": true
+    },
+    "S": {
+      "predicted": "S1",
+      "ground truth": "S1",
+      "matches": true
+    },
+    "RP": {
+      "predicted": "RP1",
+      "ground truth": "RP1",
+      "matches": true
+    },
+    "PV": {
+      "predicted": "PV1",
+      "ground truth": "PV1",
+      "matches": true
+    },
+    "A": {
+      "predicted": "A1",
+      "ground truth": "A1",
+      "matches": true
+    },
+    "PL": {
+      "predicted": "PL1",
+      "ground truth": "PL1",
+      "matches": true
+    },
+    "OO": {
+      "predicted": "OO1",
+      "ground truth": "OO0",
+      "matches": false
+    },
+    "T": {
+      "predicted": "T3",
+      "ground truth": "T3",
+      "matches": true
+    },
+    "N": {
+      "predicted": "N1b",
+      "ground truth": "N0",
+      "matches": false
+    },
+    "M": {
+      "predicted": "M0",
+      "ground truth": "M1",
+      "matches": false
+    },
+    "Resectability": {
+      "predicted": "R",
+      "ground truth": "UR",
+      "matches": false
+    },
+    "Stage": {
+      "predicted": "Stage III",
+      "ground truth": "Stage IV",
+      "matches": false
+    }
+  },
+  "duration": 3.328319
+}

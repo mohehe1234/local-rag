@@ -1,0 +1,79 @@
+{
+  "case_number": 25,
+  "findings": "A 56 mm pancreatic cancer is observed in the head of the pancreas. The common bile duct is invaded by the tumor. Serosal invasion and retropancreatic tissue invasion are noted. The tumor has more than 180\u00b0 contact with the portal vein and superior mesenteric vein, raising suspicion of vascular invasion. No invasion beyond the inferior border of the duodenum is observed. Contact of more than 180\u00b0 with the common hepatic artery is observed, suggesting invasion. The tumor does not involve the proper hepatic artery or celiac artery. The tumor invades extrapancreatic nerve plexus. No other local invasion factors are identified. Lymph node metastases are observed in one node at station 7, two nodes at station 9, and two nodes at station 12p. Liver metastases exist.",
+  "responses": [
+    {
+      "type": "ai",
+      "content": "Task 1: Diagnose the local invasion factors of pancreatic cancer.\n\nCH1 (Common bile duct invasion)\nDU0 (No invasion beyond the inferior border of the duodenum)\nS1 (Serosal invasion)\nRP1 (Retropancreatic tissue invasion)\nPV1 (Portal vein invasion)\nA1 (Common hepatic artery invasion)\nPL0 (No invasion of proper hepatic artery or celiac artery)\nOO1 (Extrapancreatic nerve plexus invasion)\n\nTask 2: Determine the classification for local invasion (T classification) of pancreatic cancer.\n\nBased on the local invasion factors, the tumor is classified as T4 due to its invasion of the common bile duct, portal vein, common hepatic artery, and extrapancreatic nerve plexus.\n\nTask 3: Determine the N classification of pancreatic cancer.\n\nRegional lymph nodes for pancreatic cancer are defined as follows:\n- Head: stations 7, 8, 9, 10, 11, 12p, 12a, 13, 14, 15, 16, 17, 18, 19, 20\n- Body: stations 5, 6, 7, 8, 9, 10, 11, 12p, 12a, 13, 14, 15, 16, 17, 18, 19, 20\n- Tail: stations 5, 6, 7, 8, 9, 10, 11, 12p, 12a, 13, 14, 15, 16, 17, 18, 19, 20\n\nThe patient's metastatic lymph node stations are 7, 9, and 12p, which are all regional for a tumor located in the head of the pancreas.\n\nCounting only the metastatic lymph nodes within the regional stations, there are 5 involved regional nodes.\n\nN classification: N1b\n\nTask 4: Determine the M classification of pancreatic cancer.\n\nThe presence of liver metastases indicates distant metastasis, so the M classification is M1.\n\nTask 5: Determine the resectability classification of pancreatic cancer.\n\nThe tumor is classified as T4, and there is evidence of distant metastasis (M1), which meets the criteria for Unresectable (UR).\n\nTask 6: Determine the overall stage according to the JPS staging system.\n\nBased on the determined T (T4), N (N1b), and M (M1) categories, the overall stage is Stage IV.",
+      "additional_kwargs": {}
+    }
+  ],
+  "evaluations": {
+    "CH": {
+      "predicted": "CH1",
+      "ground truth": "CH1",
+      "matches": true
+    },
+    "DU": {
+      "predicted": "DU0",
+      "ground truth": "DU0",
+      "matches": true
+    },
+    "S": {
+      "predicted": "S1",
+      "ground truth": "S1",
+      "matches": true
+    },
+    "RP": {
+      "predicted": "RP1",
+      "ground truth": "RP1",
+      "matches": true
+    },
+    "PV": {
+      "predicted": "PV1",
+      "ground truth": "PV1",
+      "matches": true
+    },
+    "A": {
+      "predicted": "A1",
+      "ground truth": "A1",
+      "matches": true
+    },
+    "PL": {
+      "predicted": "PL0",
+      "ground truth": "PL1",
+      "matches": false
+    },
+    "OO": {
+      "predicted": "OO1",
+      "ground truth": "OO0",
+      "matches": false
+    },
+    "T": {
+      "predicted": "T4",
+      "ground truth": "T3",
+      "matches": false
+    },
+    "N": {
+      "predicted": "N1b",
+      "ground truth": "N1a",
+      "matches": false
+    },
+    "M": {
+      "predicted": "M1",
+      "ground truth": "M1",
+      "matches": true
+    },
+    "Resectability": {
+      "predicted": "UR",
+      "ground truth": "UR",
+      "matches": true
+    },
+    "Stage": {
+      "predicted": "Stage IV",
+      "ground truth": "Stage IV",
+      "matches": true
+    }
+  },
+  "duration": 3.930763
+}

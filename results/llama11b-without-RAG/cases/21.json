@@ -1,0 +1,79 @@
+{
+  "case_number": 21,
+  "findings": "A nodular pancreatic cancer measuring 16 mm is observed in the tail of the pancreas. No local invasion factors are identified. Lymph node metastases are observed in two nodes at station 10 and two nodes at station 11d. No other metastases are observed.",
+  "responses": [
+    {
+      "type": "ai",
+      "content": "Task 1: Diagnose the local invasion factors of pancreatic cancer.\n\nBased on the image findings, no local invasion factors are identified. Therefore, the response is:\n\nCH0, DU0, S0, RP0, PV0, A0, PL0, OO0\n\nTask 2: Determine the T classification of pancreatic cancer.\n\nSince no local invasion factors are identified, the tumor size is the determining factor. The tumor measures 16 mm, which is less than 20 mm. Therefore, the T classification is:\n\nT1a\n\nTask 3: Determine the N classification of pancreatic cancer.\n\nRegional lymph nodes for pancreatic cancer in the tail are:\n- Station 10 (left gastric artery lymph nodes)\n- Station 11d (common hepatic artery lymph nodes)\n\nThe patient's metastatic lymph node stations are:\n- Station 10 (2 nodes)\n- Station 11d (2 nodes)\n\nBoth stations are regional. Counting only the metastatic lymph nodes within the regional stations, there are 4 involved regional nodes. Therefore, the N classification is:\n\nN1a\n\nTask 4: Determine the M classification of pancreatic cancer.\n\nNo distant metastases are observed, and the lymph node metastases are regional. Therefore, the M classification is:\n\nM0\n\nTask 5: Determine the resectability classification of pancreatic cancer.\n\nNo criteria for Borderline Resectable (BR) or Unresectable (UR) are met. Therefore, the resectability classification is:\n\nResectable (R)\n\nTask 6: Determine the overall stage according to the JPS staging system.\n\nBased on the determined T (T1a), N (N1a), and M (M0) categories, the overall stage is:\n\nStage IA",
+      "additional_kwargs": {}
+    }
+  ],
+  "evaluations": {
+    "CH": {
+      "predicted": "CH0",
+      "ground truth": "CH0",
+      "matches": true
+    },
+    "DU": {
+      "predicted": "DU0",
+      "ground truth": "DU0",
+      "matches": true
+    },
+    "S": {
+      "predicted": "S0",
+      "ground truth": "S0",
+      "matches": true
+    },
+    "RP": {
+      "predicted": "RP0",
+      "ground truth": "RP0",
+      "matches": true
+    },
+    "PV": {
+      "predicted": "PV0",
+      "ground truth": "PV0",
+      "matches": true
+    },
+    "A": {
+      "predicted": "A0",
+      "ground truth": "A0",
+      "matches": true
+    },
+    "PL": {
+      "predicted": "PL0",
+      "ground truth": "PL0",
+      "matches": true
+    },
+    "OO": {
+      "predicted": "OO0",
+      "ground truth": "OO0",
+      "matches": true
+    },
+    "T": {
+      "predicted": "T1a",
+      "ground truth": "T1c",
+      "matches": false
+    },
+    "N": {
+      "predicted": "N1a",
+      "ground truth": "N1b",
+      "matches": false
+    },
+    "M": {
+      "predicted": "M0",
+      "ground truth": "M0",
+      "matches": true
+    },
+    "Resectability": {
+      "predicted": "R",
+      "ground truth": "R",
+      "matches": true
+    },
+    "Stage": {
+      "predicted": "Stage IA",
+      "ground truth": "Stage IIB",
+      "matches": false
+    }
+  },
+  "duration": 2.668049
+}

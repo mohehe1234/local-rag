@@ -1,9 +1,34 @@
 # Open-Source Offline-Deployable Retrieval-Augmented Large Language Model for Assisting Pancreatic Cancer Staging
-In this project, a retrieval-augmented generation (RAG) framework is used to enable large language models (LLMs) to perform guideline-based staging of pancreatic cancer CT findings. This repository contains all experimental code. If you are running the code for the first time, please begin with the [Preparation](#preparation) section.
+In this project, a retrieval-augmented generation (RAG) framework is used to enable large language models (LLMs) to perform guideline-based staging of pancreatic cancer CT findings. This repository contains all experimental code, raw data, and LLM-generated outputs. If you are running the code for the first time, please begin with the [Preparation](#preparation) section.
 
-- If you only want to inspect the experimental results, please check out the `v1.0.0-with-results` tag or visit the following URL: https://github.com/mohehe1234/local-rag/tree/v1.0.0-with-results
-- If you want to repeat the experiments, follow the instructions at [Repeating Experiments](#repeating-experiments) section.
-- If you want to run the experiments with your own data, follow the instructions at [Adding Custom Files](#adding-custom-files) section.
+- If you only want to inspect the experimental results, please refer to [Project Structure](#project-structure) section, and see the `results` directory.
+- If you want to run the program, please check out the `v1.0.0` tag (https://github.com/mohehe1234/local-rag/tree/v1.0.0), where the unnecessary results directory has been removed for installation.
+
+## Project Structure
+```
+.
+├── results/
+│   ├── *with-RAG/              
+│   │   ├── cases/
+│   │   │   └ *.json            # LLM-generated responses for each case are stored.
+│   │   └── log.json            # The language models used and all guideline chunks are documented.
+│   └── *without-RAG/ 
+│       ├── cases/
+│       │   └ *.json
+│       └── log.json            # Information about the models are stored.
+├── scripts/                    # Scripts for repeating experiments are stored.
+│   ├── *.ps1                   # for Windows
+│   └── *.sh                    # for macOS / Linux
+├── .gitignore              
+├── .python-version
+├── LICENSE
+├── main.py
+├── pancreatic_cancers.json     # Simulated pancreatic cancer CT findings with ground-truth staging information are included.
+├── pyproject.toml
+├── README.md
+├── REK.txt                     # The pancreatic cancer staging guideline used as reliable external knowledge is provided.
+└── uv.lock
+```
 
 ## Preparation
 Follow the steps below to set up and run the project locally.
@@ -153,10 +178,11 @@ This repository contains:
   Creative Commons Attribution 4.0 International (CC BY 4.0).
 
 ### CC BY 4.0 Attribution
-The following file is licensed under CC BY 4.0:
+The following files are licensed under CC BY 4.0:
 - `REK.txt`
+- `results/*with-RAG/log.json`
 
-This file include reformatted and chunked versions of the original article text.
+These files include reformatted and chunked versions of the original article text.
 Changes were made to ensure experimental transparency and reproducibility.
 
 **Original guideline:**

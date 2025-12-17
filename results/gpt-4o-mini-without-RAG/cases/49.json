@@ -1,0 +1,81 @@
+{
+  "case_number": 49,
+  "findings": "An infiltrative pancreatic cancer measuring 55 mm is observed in the body of the pancreas. Serosal invasion and retropancreatic tissue invasion are noted. There is contact of more than 180\u00b0 with the splenic artery, suggesting invasion. The tumor is in contact with the aorta, with an indistinct boundary, indicating invasion. No other local invasion factors are identified. No lymph node metastases are present. Two hypodense masses are observed in the right lobe of the liver, raising suspicion of liver metastases.",
+  "responses": [
+    {
+      "type": "ai",
+      "content": "Based on the provided image findings, here are the responses for each task:\n\n**Task 1:** Diagnose the local invasion factors of pancreatic cancer.  \nResponse: **CH0, DU0, S1, RP1, PV0, A1, PL1, OO0**\n\n**Task 2:** Determine the classification for local invasion (T classification) of pancreatic cancer.  \nResponse: **T4** (due to invasion of the splenic artery and aorta).\n\n**Task 3:** Determine the N classification (N0, N1a, N1b) of pancreatic cancer.  \nRegional lymph nodes for the body of the pancreas are: 8a, 8p, 9, 10, 11p, 11d, 14t, 18.  \nSince there are no lymph node metastases present, the response is: **N0**.\n\n**Task 4:** Determine the M classification (M0 or M1) of pancreatic cancer.  \nResponse: **M1** (due to the presence of two hypodense masses in the liver, indicating liver metastases).\n\n**Task 5:** Determine the resectability classification of pancreatic cancer.  \nResponse: **UR-M** (due to the presence of distant metastasis to the liver).\n\n**Task 6:** Classify the overall stage according to the JPS staging system.  \nResponse: **Stage IV** (due to M1 classification).",
+      "additional_kwargs": {
+        "refusal": null
+      }
+    }
+  ],
+  "evaluations": {
+    "CH": {
+      "predicted": "CH0",
+      "ground truth": "CH0",
+      "matches": true
+    },
+    "DU": {
+      "predicted": "DU0",
+      "ground truth": "DU0",
+      "matches": true
+    },
+    "S": {
+      "predicted": "S1",
+      "ground truth": "S1",
+      "matches": true
+    },
+    "RP": {
+      "predicted": "RP1",
+      "ground truth": "RP1",
+      "matches": true
+    },
+    "PV": {
+      "predicted": "PV0",
+      "ground truth": "PV0",
+      "matches": true
+    },
+    "A": {
+      "predicted": "A1",
+      "ground truth": "A1",
+      "matches": true
+    },
+    "PL": {
+      "predicted": "PL1",
+      "ground truth": "PL0",
+      "matches": false
+    },
+    "OO": {
+      "predicted": "OO0",
+      "ground truth": "OO1",
+      "matches": false
+    },
+    "T": {
+      "predicted": "T4",
+      "ground truth": "T3",
+      "matches": false
+    },
+    "N": {
+      "predicted": "N0",
+      "ground truth": "N0",
+      "matches": true
+    },
+    "M": {
+      "predicted": "M1",
+      "ground truth": "M1",
+      "matches": true
+    },
+    "Resectability": {
+      "predicted": "UR",
+      "ground truth": "UR",
+      "matches": true
+    },
+    "Stage": {
+      "predicted": "Stage IV",
+      "ground truth": "Stage IV",
+      "matches": true
+    }
+  },
+  "duration": 5.870971
+}

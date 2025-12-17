@@ -1,0 +1,79 @@
+{
+  "case_number": 86,
+  "findings": "An infiltrative pancreatic cancer measuring 50 mm is observed in the head of the pancreas. Serosal invasion and retropancreatic tissue invasion are noted. There is contact of more than 180\u00b0 with the portal vein, suggesting invasion. No invasion beyond the inferior border of the duodenum is observed. No other local invasion factors are identified. Lymph node metastasis is observed in one node at station 8p. No other evident metastases are observed.",
+  "responses": [
+    {
+      "type": "ai",
+      "content": "Okay, I will perform the requested tasks based solely on the provided image findings and the implicit JPS staging guideline.\n\n**Task 1: Diagnose the local invasion factors**\n\nBased on the findings:\n*   **CH**0 (No invasion beyond the inferior border of the duodenum)\n*   **DU**0 (No direct duodenal invasion stated)\n*   **S**1 (Serosal invasion noted)\n*   **RP**1 (Retropancreatic tissue invasion noted)\n*   **PV**1 (Contact of more than 180\u00b0 with the portal vein, suggesting invasion)\n*   **A**0 (No arterial invasion stated)\n*   **PL**0 (No perineural invasion stated)\n*   **OO**0 (No other organ invasion stated)\n\n**Response:** CH0, DU0, S1, RP1, PV1, A0, PL0, OO0\n\n**Task 2: Determine the T classification**\n\nThe tumor size is 50mm, and there is serosal invasion and retropancreatic tissue invasion, as well as portal vein involvement. Based on these findings, the T classification is T3.\n\n**Response:** T3\n\n**Task 3: Determine the N classification**\n\nThe tumor is in the head of the pancreas. Regional lymph node stations for the head of the pancreas are: 6, 8a, 8b, 8p, 9, 10, 12, 13, 14, 17.\n\nLymph node metastasis is observed in station 8p, which *is* a regional station. The total count of involved regional nodes is 1.\n\nTherefore, the N classification is N1a.\n\n**Response:** N1a\n\n**Task 4: Determine the M classification**\n\nThe findings state no other evident metastases are observed. Therefore, the M classification is M0.\n\n**Response:** M0\n\n**Task 5: Determine the resectability classification**\n\nBased on the local invasion factors and distant metastasis status:\n\n*   **Resectable (R):** No BR or UR criteria are met.\n*   **Borderline Resectable (BR):** Not met.\n*   **Unresectable (UR):** Not met.\n\nTherefore, the resectability classification is Resectable.\n\n**Response:** R\n\n**Task 6: Determine the overall stage**\n\nBased on the JPS staging system, with T3, N1a, and M0:\n\n*   T3: Tumor is >2 cm and has invaded the duodenum or pancreas.\n*   N1a: Metastasis in 1-3 regional lymph nodes.\n*   M0: No distant metastasis.\n\nThis combination corresponds to **Stage IIB**.\n\n**Response:** Stage IIB\n\n\n\n",
+      "additional_kwargs": {}
+    }
+  ],
+  "evaluations": {
+    "CH": {
+      "predicted": "CH0",
+      "ground truth": "CH0",
+      "matches": true
+    },
+    "DU": {
+      "predicted": "DU0",
+      "ground truth": "DU0",
+      "matches": true
+    },
+    "S": {
+      "predicted": "S1",
+      "ground truth": "S1",
+      "matches": true
+    },
+    "RP": {
+      "predicted": "RP1",
+      "ground truth": "RP1",
+      "matches": true
+    },
+    "PV": {
+      "predicted": "PV1",
+      "ground truth": "PV1",
+      "matches": true
+    },
+    "A": {
+      "predicted": "A0",
+      "ground truth": "A0",
+      "matches": true
+    },
+    "PL": {
+      "predicted": "PL0",
+      "ground truth": "PL0",
+      "matches": true
+    },
+    "OO": {
+      "predicted": "OO0",
+      "ground truth": "OO0",
+      "matches": true
+    },
+    "T": {
+      "predicted": "T3",
+      "ground truth": "T3",
+      "matches": true
+    },
+    "N": {
+      "predicted": "N1a",
+      "ground truth": "N1a",
+      "matches": true
+    },
+    "M": {
+      "predicted": "M0",
+      "ground truth": "M0",
+      "matches": true
+    },
+    "Resectability": {
+      "predicted": "R",
+      "ground truth": "BR",
+      "matches": false
+    },
+    "Stage": {
+      "predicted": "Stage IIB",
+      "ground truth": "Stage IIB",
+      "matches": true
+    }
+  },
+  "duration": 14.075145
+}

@@ -1,0 +1,79 @@
+{
+  "case_number": 45,
+  "findings": "An infiltrative pancreatic cancer measuring 55 mm is observed in the head of the pancreas. Serosal invasion and retropancreatic tissue invasion are noted. No other local invasion factors are identified. There are no findings suggestive of lymph node metastasis. Osteolytic changes are scattered in the vertebral bodies and pelvic bones, raising suspicion of multiple bone metastases.",
+  "responses": [
+    {
+      "type": "ai",
+      "content": "Task 1: Diagnose the local invasion factors of pancreatic cancer.\n\nBased on the image findings, the local invasion factors are:\n\nCH0 (no invasion of the common hepatic artery)\nDU0 (no invasion of the duodenum)\nS1 (serosal invasion)\nRP1 (retropancreatic tissue invasion)\nPV0 (no invasion of the portal vein)\nA0 (no invasion of the abdominal aorta)\nPL0 (no invasion of the pancreatic lymphatic vessels)\nOO1 (osteolytic changes in the vertebral bodies and pelvic bones, indicating possible bone metastasis, but not a local invasion factor)\n\nTask 2: Determine the T classification of pancreatic cancer.\n\nBased on the size of the tumor (55 mm) and the presence of serosal invasion, the T classification is T3.\n\nTask 3: Determine the N classification of pancreatic cancer.\n\nThe regional lymph nodes for pancreatic cancer are:\n\n* Stations 12a, 12b, 12c, 13, 14, 15, 16, 17, 18, and 19 for tumors in the head of the pancreas\n\nThere are no metastatic lymph nodes in the regional stations. Therefore, the N classification is N0.\n\nTask 4: Determine the M classification of pancreatic cancer.\n\nThe presence of osteolytic changes in the vertebral bodies and pelvic bones, indicating possible bone metastasis, suggests distant metastasis. Therefore, the M classification is M1.\n\nTask 5: Determine the resectability classification of pancreatic cancer.\n\nBased on the T classification (T3) and the M classification (M1), the tumor is Unresectable (UR).\n\nTask 6: Determine the overall stage according to the JPS staging system.\n\nBased on the T classification (T3), N classification (N0), and M classification (M1), the overall stage is Stage IV.",
+      "additional_kwargs": {}
+    }
+  ],
+  "evaluations": {
+    "CH": {
+      "predicted": "CH0",
+      "ground truth": "CH0",
+      "matches": true
+    },
+    "DU": {
+      "predicted": "DU0",
+      "ground truth": "DU0",
+      "matches": true
+    },
+    "S": {
+      "predicted": "S1",
+      "ground truth": "S1",
+      "matches": true
+    },
+    "RP": {
+      "predicted": "RP1",
+      "ground truth": "RP1",
+      "matches": true
+    },
+    "PV": {
+      "predicted": "PV0",
+      "ground truth": "PV0",
+      "matches": true
+    },
+    "A": {
+      "predicted": "A0",
+      "ground truth": "A0",
+      "matches": true
+    },
+    "PL": {
+      "predicted": "PL0",
+      "ground truth": "PL0",
+      "matches": true
+    },
+    "OO": {
+      "predicted": "OO1",
+      "ground truth": "OO0",
+      "matches": false
+    },
+    "T": {
+      "predicted": "T3",
+      "ground truth": "T3",
+      "matches": true
+    },
+    "N": {
+      "predicted": "N0",
+      "ground truth": "N0",
+      "matches": true
+    },
+    "M": {
+      "predicted": "M1",
+      "ground truth": "M1",
+      "matches": true
+    },
+    "Resectability": {
+      "predicted": "UR",
+      "ground truth": "UR",
+      "matches": true
+    },
+    "Stage": {
+      "predicted": "Stage IV",
+      "ground truth": "Stage IV",
+      "matches": true
+    }
+  },
+  "duration": 2.880341
+}

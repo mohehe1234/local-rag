@@ -1,0 +1,79 @@
+{
+  "case_number": 94,
+  "findings": "An infiltrative pancreatic cancer measuring 53 mm is observed in the body of the pancreas. Serosal invasion and retropancreatic tissue invasion are noted. There is contact of more than 180\u00b0 with both the splenic vein and splenic artery, suggesting invasion. Extrapancreatic nerve plexus invasion is observed. No other local invasion factors are identified. Lymph node metastasis is observed in one node at station 8p. No other evident metastases are observed.",
+  "responses": [
+    {
+      "type": "ai",
+      "content": "Task 1: Diagnose the local invasion factors of pancreatic cancer.\n\nCH0 (no involvement of the common hepatic artery)\nDU0 (no involvement of the duodenum)\nS1 (serosal invasion)\nRP1 (retropancreatic tissue invasion)\nPV0 (no involvement of the portal vein)\nA1 (invasion of the splenic artery)\nPL0 (no involvement of the pancreatic lymphatic vessels)\nOO1 (extrapancreatic nerve plexus invasion)\n\nTask 2: Determine the T classification of pancreatic cancer.\n\nBased on the size of the tumor (53 mm) and the presence of serosal invasion, retropancreatic tissue invasion, contact with the splenic vein and splenic artery, and extrapancreatic nerve plexus invasion, the T classification is T4.\n\nTask 3: Determine the N classification of pancreatic cancer.\n\nRegional lymph nodes for pancreatic cancer in the body of the pancreas are:\n- Station 8p (left gastric artery lymph nodes)\n- Station 8a (common hepatic artery lymph nodes)\n- Station 9 (splenic artery lymph nodes)\n- Station 12a (pancreatic lymph nodes)\n\nThe patient's metastatic lymph node station is 8p, which is regional. There is only 1 metastatic lymph node at station 8p. Therefore, the N classification is N1a.\n\nTask 4: Determine the M classification of pancreatic cancer.\n\nThere are no distant metastases observed. Therefore, the M classification is M0.\n\nTask 5: Determine the resectability classification of pancreatic cancer.\n\nBased on the presence of serosal invasion and retropancreatic tissue invasion, the tumor is Unresectable (UR).\n\nTask 6: Determine the overall stage according to the JPS staging system.\n\nBased on the T4 classification, N1a classification, and M0 classification, the overall stage is Stage III.",
+      "additional_kwargs": {}
+    }
+  ],
+  "evaluations": {
+    "CH": {
+      "predicted": "CH0",
+      "ground truth": "CH0",
+      "matches": true
+    },
+    "DU": {
+      "predicted": "DU0",
+      "ground truth": "DU0",
+      "matches": true
+    },
+    "S": {
+      "predicted": "S1",
+      "ground truth": "S1",
+      "matches": true
+    },
+    "RP": {
+      "predicted": "RP1",
+      "ground truth": "RP1",
+      "matches": true
+    },
+    "PV": {
+      "predicted": "PV0",
+      "ground truth": "PV1",
+      "matches": false
+    },
+    "A": {
+      "predicted": "A1",
+      "ground truth": "A1",
+      "matches": true
+    },
+    "PL": {
+      "predicted": "PL0",
+      "ground truth": "PL1",
+      "matches": false
+    },
+    "OO": {
+      "predicted": "OO1",
+      "ground truth": "OO0",
+      "matches": false
+    },
+    "T": {
+      "predicted": "T4",
+      "ground truth": "T3",
+      "matches": false
+    },
+    "N": {
+      "predicted": "N1a",
+      "ground truth": "N1a",
+      "matches": true
+    },
+    "M": {
+      "predicted": "M0",
+      "ground truth": "M0",
+      "matches": true
+    },
+    "Resectability": {
+      "predicted": "UR",
+      "ground truth": "R",
+      "matches": false
+    },
+    "Stage": {
+      "predicted": "Stage III",
+      "ground truth": "Stage IIB",
+      "matches": false
+    }
+  },
+  "duration": 2.933446
+}

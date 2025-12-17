@@ -1,0 +1,79 @@
+{
+  "case_number": 38,
+  "findings": "An infiltrative pancreatic cancer measuring 46 mm is observed in the head of the pancreas. Retropancreatic tissue invasion is noted. There is contact of more than 180\u00b0 with both the portal vein and the superior mesenteric vein, along with vascular stenosis, suggesting invasion. No invasion beyond the inferior border of the duodenum is observed. No other local invasion factors are identified. No lymph node metastases are present. No other metastases are observed.",
+  "responses": [
+    {
+      "type": "ai",
+      "content": "Task 1: CH0, DU0, S1, RP1, PV1, A0, PL0, OO0\n\nExplanation: \n- CH0: No invasion of the common hepatic artery.\n- DU0: No invasion beyond the inferior border of the duodenum.\n- S1: Invasion of the superior mesenteric vein.\n- RP1: Invasion of the retropancreatic tissue.\n- PV1: Invasion of the portal vein.\n- A0: No invasion of the abdominal aorta.\n- PL0: No invasion of the portal lymph nodes.\n- OO0: No invasion of the omental lymph nodes.\n\nTask 2: T3\n\nExplanation: \n- The tumor is 46 mm in size, which is greater than 20 mm but not greater than 50 mm, placing it in the T1 category based on size.\n- However, the tumor has invaded the superior mesenteric vein, which is an extension-based criterion for T3.\n\nTask 3: N0\n\nExplanation: \n- Regional lymph nodes for pancreatic cancer are defined as follows:\n  - Head: stations 12a, 12b, 12c, 13, 14, 15, 16, 17, 18, 19\n  - Body and tail: stations 8a, 8b, 9, 10, 11\n- No lymph node metastases are present.\n\nTask 4: M0\n\nExplanation: \n- No distant metastases are observed.\n\nTask 5: Resectable (R)\n\nExplanation: \n- The tumor is not considered borderline resectable or unresectable based on the provided criteria.\n\nTask 6: Stage IA\n\nExplanation: \n- T classification: T3\n- N classification: N0\n- M classification: M0\n- Stage IA corresponds to T3N0M0.",
+      "additional_kwargs": {}
+    }
+  ],
+  "evaluations": {
+    "CH": {
+      "predicted": "CH0",
+      "ground truth": "CH0",
+      "matches": true
+    },
+    "DU": {
+      "predicted": "DU0",
+      "ground truth": "DU0",
+      "matches": true
+    },
+    "S": {
+      "predicted": "S1",
+      "ground truth": "S0",
+      "matches": false
+    },
+    "RP": {
+      "predicted": "RP1",
+      "ground truth": "RP1",
+      "matches": true
+    },
+    "PV": {
+      "predicted": "PV1",
+      "ground truth": "PV1",
+      "matches": true
+    },
+    "A": {
+      "predicted": "A0",
+      "ground truth": "A0",
+      "matches": true
+    },
+    "PL": {
+      "predicted": "PL0",
+      "ground truth": "PL0",
+      "matches": true
+    },
+    "OO": {
+      "predicted": "OO0",
+      "ground truth": "OO0",
+      "matches": true
+    },
+    "T": {
+      "predicted": "T3",
+      "ground truth": "T3",
+      "matches": true
+    },
+    "N": {
+      "predicted": "N0",
+      "ground truth": "N0",
+      "matches": true
+    },
+    "M": {
+      "predicted": "M0",
+      "ground truth": "M0",
+      "matches": true
+    },
+    "Resectability": {
+      "predicted": "R",
+      "ground truth": "BR",
+      "matches": false
+    },
+    "Stage": {
+      "predicted": "Stage IA",
+      "ground truth": "Stage IIA",
+      "matches": false
+    }
+  },
+  "duration": 2.87907
+}

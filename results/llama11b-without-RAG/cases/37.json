@@ -1,0 +1,79 @@
+{
+  "case_number": 37,
+  "findings": "An infiltrative pancreatic cancer measuring 51 mm is observed in the body of the pancreas. Serosal invasion and retropancreatic tissue invasion are noted. There is contact of more than 180\u00b0 with the superior mesenteric vein, suggesting invasion. No invasion beyond the inferior border of the duodenum is observed. Contact of more than 180\u00b0 with the splenic artery is also observed, indicating possible invasion. No other local invasion factors are identified. No lymph node metastases are present. A hypodense mass is observed in the left lobe of the liver, raising suspicion of liver metastasis.",
+  "responses": [
+    {
+      "type": "ai",
+      "content": "Task 1: Diagnose the local invasion factors of pancreatic cancer.\n\nCH0 (no invasion of the common hepatic artery)\nDU0 (no invasion beyond the inferior border of the duodenum)\nS1 (serosal invasion)\nRP1 (retropancreatic tissue invasion)\nPV0 (no invasion of the portal vein)\nA1 (contact of more than 180\u00b0 with the splenic artery, indicating possible invasion)\nPL0 (no invasion of the pancreatic duct)\nOO0 (no invasion of other organs)\n\nTask 2: Determine the classification for local invasion (T classification) of pancreatic cancer.\n\nBased on the size of the tumor (51 mm) and the presence of serosal invasion (S1) and retropancreatic tissue invasion (RP1), the T classification is T3.\n\nTask 3: Determine the N classification of pancreatic cancer.\n\nRegional lymph nodes for pancreatic cancer in the body of the pancreas include:\n- Station 12 (common hepatic artery)\n- Station 13 (proper hepatic artery)\n- Station 17 (splenic artery)\n- Station 18 (celiac artery)\n- Station 14 (left gastric artery)\n- Station 15 (common hepatic artery)\n- Station 16 (proper hepatic artery)\n- Station 19 (celiac artery)\n- Station 20 (superior mesenteric artery)\n- Station 21 (inferior mesenteric artery)\n\nNo lymph node metastases are present, so N0.\n\nTask 4: Determine the M classification of pancreatic cancer.\n\nA hypodense mass is observed in the left lobe of the liver, raising suspicion of liver metastasis. This indicates the presence of distant metastases, so M1.\n\nTask 5: Determine the resectability classification of pancreatic cancer.\n\nBased on the results of Task 1 and Task 4, the tumor is unresectable due to the presence of distant metastasis (M1).\n\nTask 6: Determine the overall stage according to the JPS staging system.\n\nBased on the determined T (T3), N (N0), and M (M1) categories, the overall stage is Stage IV.",
+      "additional_kwargs": {}
+    }
+  ],
+  "evaluations": {
+    "CH": {
+      "predicted": "CH0",
+      "ground truth": "CH0",
+      "matches": true
+    },
+    "DU": {
+      "predicted": "DU0",
+      "ground truth": "DU0",
+      "matches": true
+    },
+    "S": {
+      "predicted": "S1",
+      "ground truth": "S1",
+      "matches": true
+    },
+    "RP": {
+      "predicted": "RP1",
+      "ground truth": "RP1",
+      "matches": true
+    },
+    "PV": {
+      "predicted": "PV0",
+      "ground truth": "PV1",
+      "matches": false
+    },
+    "A": {
+      "predicted": "A1",
+      "ground truth": "A1",
+      "matches": true
+    },
+    "PL": {
+      "predicted": "PL0",
+      "ground truth": "PL0",
+      "matches": true
+    },
+    "OO": {
+      "predicted": "OO0",
+      "ground truth": "OO0",
+      "matches": true
+    },
+    "T": {
+      "predicted": "T3",
+      "ground truth": "T3",
+      "matches": true
+    },
+    "N": {
+      "predicted": "N0",
+      "ground truth": "N0",
+      "matches": true
+    },
+    "M": {
+      "predicted": "M1",
+      "ground truth": "M1",
+      "matches": true
+    },
+    "Resectability": {
+      "predicted": "UR",
+      "ground truth": "UR",
+      "matches": true
+    },
+    "Stage": {
+      "predicted": "Stage IV",
+      "ground truth": "Stage IV",
+      "matches": true
+    }
+  },
+  "duration": 3.268717
+}

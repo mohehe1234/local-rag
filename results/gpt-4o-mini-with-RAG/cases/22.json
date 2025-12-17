@@ -1,0 +1,197 @@
+{
+  "case_number": 22,
+  "findings": "An infiltrative pancreatic cancer measuring 56 mm is observed in the body of the pancreas. Serosal invasion and retropancreatic tissue invasion are noted. There is contact of more than 180\u00b0 with the splenic vein, suggesting invasion. Contact of less than 180\u00b0 with the celiac artery is observed, raising suspicion of invasion, although no deformation or stenosis of the celiac artery is noted. Contact of more than 180\u00b0 with the splenic artery is observed, indicating potential invasion. The tumor does not involve the common hepatic artery or proper hepatic artery. Invasion into the colon is noted. No other local invasion factors are identified. Lymph node metastases are observed in two nodes at station 2. No other metastases are observed.",
+  "responses": [
+    {
+      "type": "human",
+      "content": "You must complete Tasks 1\u20136 based on the image findings provided below.",
+      "additional_kwargs": {
+        "task_key": "Step_1"
+      }
+    },
+    {
+      "type": "ai",
+      "content": "Based on the provided guideline content and the patient information regarding the infiltrative pancreatic cancer, the appropriate classification for the EUS-FNAB sample would be:\n\n**Classification:**\n- Positive/malignant\n\n**Description of findings:**\n- The infiltrative pancreatic cancer is confirmed with serosal invasion, retropancreatic tissue invasion, and lymph node metastases. The tumor's characteristics indicate malignancy, and the presence of local invasion factors supports this classification.",
+      "additional_kwargs": {
+        "refusal": null,
+        "chunks": [
+          "29",
+          "33"
+        ]
+      }
+    },
+    {
+      "type": "human",
+      "content": "Task 1: Diagnose the local invasion factors of pancreatic cancer (CH, DU, S, RP, PV, A, PL, OO), and respond in the format: e.g., 'CH0, DU1, S1, RP1, PV0, A0, PL0, OO1'.",
+      "additional_kwargs": {
+        "task_key": "Step_2"
+      }
+    },
+    {
+      "type": "ai",
+      "content": "Based on the provided patient information and the guideline content, the local invasion factors of the pancreatic cancer are classified as follows:\n\n- Bile duct invasion (CH): CH0, absent\n- Duodenal invasion (DU): DU0, absent\n- Serosal invasion (S): S1, present\n- Retropancreatic tissue invasion (RP): RP1, present\n- Portal venous system invasion (PV): PV0, absent\n- Arterial system invasion (A): A1, present (due to contact with the splenic artery and suspicion of celiac artery invasion)\n- Extrapancreatic nerve plexus invasion (PL): PL0, absent\n- Invasion of other organs (OO): OO1, present (invasion into the colon)\n\nThus, the response is: **CH0, DU0, S1, RP1, PV0, A1, PL0, OO1**.",
+      "additional_kwargs": {
+        "refusal": null,
+        "chunks": [
+          "6"
+        ]
+      }
+    },
+    {
+      "type": "human",
+      "content": "Task 2: Based on the answer to Task 1, determine the classification for local invasion (T classification) of pancreatic cancer (T0, Tis, T1a, T1b, T1c, T2, T3, T4). If both size-based (e.g., T1, T2) and extension-based (e.g., T3, T4) criteria are met, assign the higher T category reflecting greater invasion.",
+      "additional_kwargs": {
+        "task_key": "Step_3"
+      }
+    },
+    {
+      "type": "ai",
+      "content": "Based on the provided guideline content and the findings from Task 1, the classification for local invasion (T classification) of the pancreatic cancer is determined as follows:\n\n- The tumor measures 56 mm, which exceeds the size criteria for T1 and T2.\n- The tumor exhibits serosal invasion and retropancreatic tissue invasion, indicating it extends beyond the pancreas.\n- There is contact of more than 180\u00b0 with the splenic artery, suggesting potential invasion, and invasion into the colon is noted.\n- However, the tumor does not involve the celiac artery or superior mesenteric artery.\n\nGiven these factors, the tumor extends beyond the pancreas but does not involve the celiac artery or SMA, which classifies it as T3.\n\nThus, the response is: **T3**.",
+      "additional_kwargs": {
+        "refusal": null,
+        "chunks": [
+          "5"
+        ]
+      }
+    },
+    {
+      "type": "human",
+      "content": "Task 3: Determine the N classification (N0, N1a, N1b) of pancreatic cancer. First, list the stations defined as regional lymph nodes based on the tumor location (head, body, or tail) according to the guideline. Then identify which of the patient\u2019s metastatic lymph node stations are regional, and exclude all others. Count only the metastatic lymph nodes\u2014not stations\u2014within the regional stations, and assign the N classification accordingly. Verify the total count of involved regional nodes.",
+      "additional_kwargs": {
+        "task_key": "Step_4"
+      }
+    },
+    {
+      "type": "ai",
+      "content": "Based on the provided guideline content and the patient information regarding the infiltrative pancreatic cancer in the body of the pancreas, the regional lymph nodes for the body are as follows:\n\n**Regional lymph nodes for the body:**\n- 8a (Lymph nodes in the anterosuperior group along the common hepatic artery)\n- 8p (Lymph nodes in the posterior group along the common hepatic artery)\n- 9 (Lymph nodes around the celiac artery)\n- 10 (Lymph nodes at the splenic hilum)\n- 11p (Lymph nodes along the proximal splenic artery)\n- 11d (Lymph nodes along the distal splenic artery)\n- 14t (Lymph nodes along the superior mesenteric artery, tumor side)\n- 18 (Lymph nodes along the inferior margin of the pancreas)\n\n**Metastatic lymph node stations identified:**\n- The patient has metastatic lymph nodes at station 2 (Left cardial lymph nodes), which is not a regional lymph node for the body of the pancreas.\n\nSince there are no metastatic lymph nodes in the regional lymph node stations for the body, the count of involved regional nodes is **0**.\n\n**N classification:**\n- N0: No regional lymph node metastasis\n\nThus, the response is: **N0**.",
+      "additional_kwargs": {
+        "refusal": null,
+        "chunks": [
+          "10",
+          "12"
+        ]
+      }
+    },
+    {
+      "type": "human",
+      "content": "Task 4: Determine the M classification (M0 or M1) of pancreatic cancer, based on the presence or absence of distant metastases, such as to non-regional lymph nodes or distant organs. Do not confuse direct tumor invasion with distant metastasis.",
+      "additional_kwargs": {
+        "task_key": "Step_5"
+      }
+    },
+    {
+      "type": "ai",
+      "content": "Based on the provided guideline content and the patient information, the M classification for the pancreatic cancer is determined as follows:\n\n- The patient has metastatic lymph nodes at station 2, which is not a regional lymph node for the body of the pancreas. According to the guideline, if metastasis is found in a lymph node other than a regional lymph node, it is classified as M1.\n\nSince there are distant metastases indicated by the involvement of non-regional lymph nodes, the classification is:\n\n**M1**.",
+      "additional_kwargs": {
+        "refusal": null,
+        "chunks": [
+          "12",
+          "5"
+        ]
+      }
+    },
+    {
+      "type": "human",
+      "content": "Task 5: Based on the results of Task 1 and Task 4, determine the resectability classification of pancreatic cancer as Resectable (R), Borderline Resectable (BR), or Unresectable (UR). Regional lymph node involvement does not qualify as distant or non-regional metastasis. If none of the criteria for BR or UR are met, classify as R.",
+      "additional_kwargs": {
+        "task_key": "Step_6"
+      }
+    },
+    {
+      "type": "ai",
+      "content": "Based on the results from Task 1 and Task 4, the resectability classification of the pancreatic cancer is determined as follows:\n\n- The tumor exhibits contact of more than 180\u00b0 with the splenic artery, indicating potential invasion.\n- There is also contact of less than 180\u00b0 with the celiac artery, raising suspicion of invasion but without deformation or stenosis.\n- The tumor has metastases in non-regional lymph nodes (station 2), which classifies it as M1.\n\nAccording to the guideline content, the presence of distant metastasis (M1) classifies the tumor as **Unresectable (UR-M)**.\n\nThus, the response is: **UR**.",
+      "additional_kwargs": {
+        "refusal": null,
+        "chunks": [
+          "16",
+          "15"
+        ]
+      }
+    },
+    {
+      "type": "human",
+      "content": "Task 6: Based on the determined T, N, and M categories, classify the overall stage according to the JPS staging system. Output one of: Stage 0, Stage IA, Stage IB, Stage IIA, Stage IIB, Stage III, or Stage IV.",
+      "additional_kwargs": {
+        "task_key": "Step_7"
+      }
+    },
+    {
+      "type": "ai",
+      "content": "Based on the determined T, N, and M categories from previous tasks:\n\n- T classification: T3 (due to serosal invasion and retropancreatic tissue invasion)\n- N classification: N1 (due to involvement of non-regional lymph nodes)\n- M classification: M1 (due to distant metastasis)\n\nAccording to the JPS staging system:\n\n- The presence of M1 indicates that the cancer is classified as **Stage IV**.\n\nThus, the response is: **Stage IV**.",
+      "additional_kwargs": {
+        "refusal": null,
+        "chunks": [
+          "15"
+        ]
+      }
+    }
+  ],
+  "evaluations": {
+    "CH": {
+      "predicted": "CH0",
+      "ground truth": "CH0",
+      "matches": true
+    },
+    "DU": {
+      "predicted": "DU0",
+      "ground truth": "DU0",
+      "matches": true
+    },
+    "S": {
+      "predicted": "S1",
+      "ground truth": "S1",
+      "matches": true
+    },
+    "RP": {
+      "predicted": "RP1",
+      "ground truth": "RP1",
+      "matches": true
+    },
+    "PV": {
+      "predicted": "PV0",
+      "ground truth": "PV1",
+      "matches": false
+    },
+    "A": {
+      "predicted": "A1",
+      "ground truth": "A1",
+      "matches": true
+    },
+    "PL": {
+      "predicted": "PL0",
+      "ground truth": "PL0",
+      "matches": true
+    },
+    "OO": {
+      "predicted": "OO1",
+      "ground truth": "OO1",
+      "matches": true
+    },
+    "T": {
+      "predicted": "T3",
+      "ground truth": "T4",
+      "matches": false
+    },
+    "N": {
+      "predicted": "N1a",
+      "ground truth": "N0",
+      "matches": false
+    },
+    "M": {
+      "predicted": "M1",
+      "ground truth": "M1",
+      "matches": true
+    },
+    "Resectability": {
+      "predicted": "UR",
+      "ground truth": "UR",
+      "matches": true
+    },
+    "Stage": {
+      "predicted": "Stage IV",
+      "ground truth": "Stage IV",
+      "matches": true
+    }
+  },
+  "duration": 43.314544
+}

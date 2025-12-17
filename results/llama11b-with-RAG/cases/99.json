@@ -1,0 +1,176 @@
+{
+  "case_number": 99,
+  "findings": "An infiltrative pancreatic cancer measuring 57 mm is observed in the tail of the pancreas. Serosal invasion and retropancreatic tissue invasion are noted. There is contact of more than 180\u00b0 with the superior mesenteric vein, suggesting invasion. No invasion beyond the inferior border of the duodenum is observed. Prominent soft tissue shadows around the vessels raise suspicion of extrapancreatic nerve plexus invasion. No other local invasion factors are identified. Lymph node metastases are observed in three nodes at station 14t and one node at station 18. Multiple liver metastases are observed.",
+  "responses": [
+    {
+      "type": "human",
+      "content": "Task 1: Diagnose the local invasion factors of pancreatic cancer (CH, DU, S, RP, PV, A, PL, OO), and respond in the format: e.g., 'CH0, DU1, S1, RP1, PV0, A0, PL0, OO1'.",
+      "additional_kwargs": {
+        "task_key": "Step_1"
+      }
+    },
+    {
+      "type": "ai",
+      "content": "Based on the provided guideline and patient information, the local invasion factors of pancreatic cancer are:\n\nCH0 (bile duct invasion: absent)\nDU0 (duodenal invasion: absent)\nS1 (serosal invasion: present)\nRP1 (retropancreatic tissue invasion: present)\nPV1 (portal venous system invasion: present, specifically with contact of more than 180\u00b0 with the superior mesenteric vein)\nA0 (arterial system invasion: absent)\nPL1 (extrapancreatic nerve plexus invasion: present, indicated by prominent soft tissue shadows around the vessels)\nOO0 (invasion of other organs: absent)",
+      "additional_kwargs": {
+        "chunks": [
+          "5",
+          "6"
+        ]
+      }
+    },
+    {
+      "type": "human",
+      "content": "Task 2: Based on the answer to Task 1, determine the classification for local invasion (T classification) of pancreatic cancer (T0, Tis, T1a, T1b, T1c, T2, T3, T4). If both size-based (e.g., T1, T2) and extension-based (e.g., T3, T4) criteria are met, assign the higher T category reflecting greater invasion.",
+      "additional_kwargs": {
+        "task_key": "Step_2"
+      }
+    },
+    {
+      "type": "ai",
+      "content": "Based on the provided guideline and patient information, the classification for local invasion (T classification) of pancreatic cancer is:\n\nT3\n\nExplanation:\n\n* The tumor size is 57 mm, which is greater than 20 mm in the largest diameter, so it does not meet the criteria for T1 (T1a, T1b, T1c) or T2.\n* The tumor extends beyond the pancreas, as indicated by serosal invasion and retropancreatic tissue invasion, and contact of more than 180\u00b0 with the superior mesenteric vein, suggesting invasion.\n* The tumor does not involve the celiac artery (CA) or superior mesenteric artery (SMA), so it does not meet the criteria for T4.\n* Therefore, the tumor is classified as T3, which is defined as a tumor that extends beyond the pancreas but does not involve the CA or SMA.\n\nNote: The presence of lymph node metastases and liver metastases does not affect the T classification, as these are considered in the N and M categories, respectively.",
+      "additional_kwargs": {
+        "chunks": [
+          "5",
+          "15"
+        ]
+      }
+    },
+    {
+      "type": "human",
+      "content": "Task 3: Determine the N classification (N0, N1a, N1b) of pancreatic cancer. First, list the stations defined as regional lymph nodes based on the tumor location (head, body, or tail) according to the guideline. Then identify which of the patient\u2019s metastatic lymph node stations are regional, and exclude all others. Count only the metastatic lymph nodes\u2014not stations\u2014within the regional stations, and assign the N classification accordingly. Verify the total count of involved regional nodes.",
+      "additional_kwargs": {
+        "task_key": "Step_3"
+      }
+    },
+    {
+      "type": "ai",
+      "content": "Based on the provided guideline and patient information, the N classification of pancreatic cancer is:\n\nN1a\n\nExplanation:\n\n* The tumor is located in the tail of the pancreas, so the relevant regional lymph nodes are those listed in the \"Tail\" column of Table 2.\n* The metastatic lymph nodes are observed in three nodes at station 14t and one node at station 18.\n* Station 14t is a regional lymph node for the tail of the pancreas, so the three nodes at this station are counted as regional metastases.\n* Station 18 is also a regional lymph node for the tail of the pancreas, so the one node at this station is also counted as a regional metastasis.\n* There are no metastatic lymph nodes in the other regional lymph nodes listed for the tail of the pancreas (8a, 9, 10, 11p, 11d).\n* Therefore, the total count of involved regional nodes is 4 (3 nodes at station 14t + 1 node at station 18).\n* According to the guideline, N1a is defined as metastasis in one to three regional lymph nodes, so the N classification is N1a.",
+      "additional_kwargs": {
+        "chunks": [
+          "9",
+          "12"
+        ]
+      }
+    },
+    {
+      "type": "human",
+      "content": "Task 4: Determine the M classification (M0 or M1) of pancreatic cancer, based on the presence or absence of distant metastases, such as to non-regional lymph nodes or distant organs. Do not confuse direct tumor invasion with distant metastasis.",
+      "additional_kwargs": {
+        "task_key": "Step_4"
+      }
+    },
+    {
+      "type": "ai",
+      "content": "Based on the provided guideline and patient information, the M classification of pancreatic cancer is:\n\nM1\n\nExplanation:\n\n* The patient has multiple liver metastases, which indicates the presence of distant metastases.\n* According to the guideline, M1 is defined as distant metastasis.\n* The liver is not listed as a regional lymph node in Table 2, so the metastases in the liver are considered distant metastases.\n* The presence of distant metastases does not affect the T or N classification, which are based on the extent of local invasion and regional lymph node metastasis, respectively.\n* Therefore, the M classification is M1, indicating the presence of distant metastases.",
+      "additional_kwargs": {
+        "chunks": [
+          "5",
+          "12"
+        ]
+      }
+    },
+    {
+      "type": "human",
+      "content": "Task 5: Based on the results of Task 1 and Task 4, determine the resectability classification of pancreatic cancer as Resectable (R), Borderline Resectable (BR), or Unresectable (UR). Regional lymph node involvement does not qualify as distant or non-regional metastasis. If none of the criteria for BR or UR are met, classify as R.",
+      "additional_kwargs": {
+        "task_key": "Step_5"
+      }
+    },
+    {
+      "type": "ai",
+      "content": "Based on the provided guideline and patient information, the resectability classification of pancreatic cancer is:\n\nUR-M (Unresectable with distant metastasis)\n\nExplanation:\n\n* The patient has multiple liver metastases, which indicates the presence of distant metastasis (M1).\n* According to the guideline, UR-M is defined as tumor with distant metastasis, including nonregional lymph node metastasis.\n* The patient's tumor has invaded the serosa and retropancreatic tissue, and has contact of more than 180\u00b0 with the superior mesenteric vein, but this does not meet the criteria for BR or UR-LA.\n* Therefore, the resectability classification is UR-M, indicating that the tumor is unresectable due to distant metastasis.",
+      "additional_kwargs": {
+        "chunks": [
+          "15",
+          "16"
+        ]
+      }
+    },
+    {
+      "type": "human",
+      "content": "Task 6: Based on the determined T, N, and M categories, classify the overall stage according to the JPS staging system. Output one of: Stage 0, Stage IA, Stage IB, Stage IIA, Stage IIB, Stage III, or Stage IV.",
+      "additional_kwargs": {
+        "task_key": "Step_6"
+      }
+    },
+    {
+      "type": "ai",
+      "content": "Based on the provided guideline and patient information, the overall stage according to the JPS staging system is:\n\nStage IV\n\nExplanation:\n\n* The patient has a T3 tumor (invasive pancreatic cancer with serosal invasion and retropancreatic tissue invasion, and contact of more than 180\u00b0 with the superior mesenteric vein).\n* The patient has N1a lymph node metastases (three nodes at station 14t and one node at station 18).\n* The patient has M1 distant metastasis (multiple liver metastases).\n* According to Table 3, Stage IV is characterized by distant metastasis (M1), regardless of the T and N categories.\n* Therefore, the overall stage is Stage IV.",
+      "additional_kwargs": {
+        "chunks": [
+          "15",
+          "14"
+        ]
+      }
+    }
+  ],
+  "evaluations": {
+    "CH": {
+      "predicted": "CH0",
+      "ground truth": "CH0",
+      "matches": true
+    },
+    "DU": {
+      "predicted": "DU0",
+      "ground truth": "DU0",
+      "matches": true
+    },
+    "S": {
+      "predicted": "S1",
+      "ground truth": "S1",
+      "matches": true
+    },
+    "RP": {
+      "predicted": "RP1",
+      "ground truth": "RP1",
+      "matches": true
+    },
+    "PV": {
+      "predicted": "PV1",
+      "ground truth": "PV1",
+      "matches": true
+    },
+    "A": {
+      "predicted": "A0",
+      "ground truth": "A0",
+      "matches": true
+    },
+    "PL": {
+      "predicted": "PL1",
+      "ground truth": "PL1",
+      "matches": true
+    },
+    "OO": {
+      "predicted": "OO0",
+      "ground truth": "OO0",
+      "matches": true
+    },
+    "T": {
+      "predicted": "T3",
+      "ground truth": "T3",
+      "matches": true
+    },
+    "N": {
+      "predicted": "N1a",
+      "ground truth": "N1a",
+      "matches": true
+    },
+    "M": {
+      "predicted": "M1",
+      "ground truth": "M1",
+      "matches": true
+    },
+    "Resectability": {
+      "predicted": "UR",
+      "ground truth": "UR",
+      "matches": true
+    },
+    "Stage": {
+      "predicted": "Stage IV",
+      "ground truth": "Stage IV",
+      "matches": true
+    }
+  },
+  "duration": 15.442342
+}

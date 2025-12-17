@@ -1,0 +1,79 @@
+{
+  "case_number": 32,
+  "findings": "An infiltrative pancreatic cancer measuring 60 mm is observed in the body of the pancreas. Serosal invasion and retropancreatic tissue invasion are noted. There is contact of more than 180\u00b0 with the superior mesenteric vein, suggesting invasion. The tumor extends beyond the inferior border of the duodenum, with invasion into the colon observed. No other local invasion factors are identified. Lymph node metastases are observed in two nodes each at stations 9 and 10. A contrast-enhancing mass with surrounding edema is noted in the left centrum semiovale, raising suspicion of brain metastasis.",
+  "responses": [
+    {
+      "type": "ai",
+      "content": "Okay, I will perform the requested tasks based strictly on the provided image findings and the implicit JPS staging guideline.\n\n**Task 1: Diagnose the local invasion factors**\n\nBased on the image findings:\n\n*   **CH**0 (No mention of common hepatic artery involvement)\n*   **DU**1 (Tumor extends beyond the inferior border of the duodenum)\n*   **S**1 (Serosal invasion noted)\n*   **RP**1 (Retropancreatic tissue invasion noted)\n*   **PV**1 (Contact of more than 180\u00b0 with the superior mesenteric vein, suggesting invasion)\n*   **A**0 (No mention of aorta involvement)\n*   **PL**0 (No mention of Peritoneal invasion)\n*   **OO**0 (No mention of other organs involvement)\n\n**Response:** CH0, DU1, S1, RP1, PV1, A0, PL0, OO0\n\n**Task 2: Determine the T classification**\n\nBased on Task 1 and the JPS guideline (implicitly assuming size >20mm and presence of invasion factors):\n\n*   The tumor size is 60mm, which meets the criteria for T2 or higher.\n*   The presence of DU, S, RP, and PV invasion factors indicates at least T3.\n*   Therefore, the T classification is T3.\n\n**Response:** T3\n\n**Task 3: Determine the N classification**\n\nFirst, identify regional lymph nodes based on tumor location (body of the pancreas):\n\n*   Regional lymph nodes: Stations 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18.\n\nNext, identify metastatic regional lymph node stations:\n\n*   Metastases are observed in stations 9 and 10.\n\nCount the metastatic lymph nodes within regional stations:\n\n*   Two nodes in station 9 + Two nodes in station 10 = 4 involved regional nodes.\n\nTherefore, the N classification is N1a (1-3 nodes).\n\n**Response:** N1a\n\n**Task 4: Determine the M classification**\n\nThe image findings indicate a contrast-enhancing mass in the left centrum semiovale, raising suspicion of brain metastasis. This constitutes distant metastasis.\n\nTherefore, the M classification is M1.\n\n**Response:** M1\n\n**Task 5: Determine the resectability classification**\n\nBased on the findings:\n\n*   PV1 indicates borderline resectability.\n*   M1 indicates unresectability.\n\nTherefore, the resectability classification is Unresectable (UR).\n\n**Response:** UR\n\n**Task 6: Determine the overall stage**\n\nBased on the determined T, N, and M categories (T3, N1a, M1):\n\nAccording to the JPS staging system, T3, N1a, M1 corresponds to Stage IV.\n\n**Response:** Stage IV\n\n\n\n",
+      "additional_kwargs": {}
+    }
+  ],
+  "evaluations": {
+    "CH": {
+      "predicted": "CH0",
+      "ground truth": "CH0",
+      "matches": true
+    },
+    "DU": {
+      "predicted": "DU1",
+      "ground truth": "DU0",
+      "matches": false
+    },
+    "S": {
+      "predicted": "S1",
+      "ground truth": "S1",
+      "matches": true
+    },
+    "RP": {
+      "predicted": "RP1",
+      "ground truth": "RP1",
+      "matches": true
+    },
+    "PV": {
+      "predicted": "PV1",
+      "ground truth": "PV1",
+      "matches": true
+    },
+    "A": {
+      "predicted": "A0",
+      "ground truth": "A0",
+      "matches": true
+    },
+    "PL": {
+      "predicted": "PL0",
+      "ground truth": "PL0",
+      "matches": true
+    },
+    "OO": {
+      "predicted": "OO0",
+      "ground truth": "OO1",
+      "matches": false
+    },
+    "T": {
+      "predicted": "T3",
+      "ground truth": "T3",
+      "matches": true
+    },
+    "N": {
+      "predicted": "N1a",
+      "ground truth": "N1b",
+      "matches": false
+    },
+    "M": {
+      "predicted": "M1",
+      "ground truth": "M1",
+      "matches": true
+    },
+    "Resectability": {
+      "predicted": "UR",
+      "ground truth": "UR",
+      "matches": true
+    },
+    "Stage": {
+      "predicted": "Stage IV",
+      "ground truth": "Stage IV",
+      "matches": true
+    }
+  },
+  "duration": 15.05888
+}
