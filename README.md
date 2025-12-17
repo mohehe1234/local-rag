@@ -1,12 +1,9 @@
-# Offline-Deployable Retrieval-Augmented Large Language Model for Assisting Pancreatic Cancer Staging
-In this project, retrieval-augmented generation (RAG) approach is used to enable an LLM to diagnose fictional image findings of pancreatic cancer.
-This repository contains the experimental code.
-If you are running this code for the first time, please start with the Preparation section.
+# Open-Source Offline-Deployable Retrieval-Augmented Large Language Model for Assisting Pancreatic Cancer Staging
+In this project, a retrieval-augmented generation (RAG) framework is used to enable large language models (LLMs) to perform guideline-based staging of pancreatic cancer CT findings. This repository contains all experimental code. If you are running the code for the first time, please begin with the [Preparation](#preparation) section.
 
-- If you only want to inspect the experimental results, please check out the
-`v1.0.0-with-results` tag, for example: `git checkout v1.0.0-with-results`
-- If you want to repeat the experiments, follow the instructions at [#Repeating Experiments](#repeating-experiments).
-- If you want to run the experiments with your own data, follow the instructions at [#Adding Custom Files](#adding-custom-files).
+- If you only want to inspect the experimental results, please check out the `v1.0.0-with-results` tag or visit the following URL: https://github.com/mohehe1234/local-rag/tree/v1.0.0-with-results
+- If you want to repeat the experiments, follow the instructions at [Repeating Experiments](#repeating-experiments) section.
+- If you want to run the experiments with your own data, follow the instructions at [Adding Custom Files](#adding-custom-files) section.
 
 ## Preparation
 Follow the steps below to set up and run the project locally.
@@ -59,7 +56,7 @@ uv sync --extra cuXXX
 ```
 
 ## Running the LLM for Staging
-You can run the program by specifying the reliable external knowledge (REK) and the file containing the image findings.
+You can run the program by specifying the reliable external knowledge (REK) and the file containing the CT findings.
 
 ### Basic command
 ```
@@ -81,7 +78,7 @@ python main.py [options]
 
 
 Please refer to the `scripts` directory for example runs.
-If you want to provide your own new REK or image findings files, follow the instructions in [#Adding Custom Files](#adding-custom-files).
+If you want to provide your own new REK or CT findings files, follow the instructions in [Adding Custom Files](#adding-custom-files) section.
 
 ## Repeating Experiments
 **If using `pip`**
@@ -102,11 +99,11 @@ If you want to provide your own new REK or image findings files, follow the inst
 Please replace `run_pip` with `run_uv` in the commands above and then execute them.
 
 ## Adding Custom Files
-This section explains how to replace the REK and image findings files and execute the code with your own files.
+This section explains how to replace the REK and CT findings files and execute the code with your own files.
 ### Replacing the REK
-Create a new file in Markdown format based on `REK.txt`. When running the code, refer to [#Running the LLM for Staging](#running-the-llm-for-staging) and specify your file using the `--rek` argument.
-### Replacing image findings
-Prepare a JSON file following the schema below. When running the code, refer to [#Running the LLM for Staging](#running-the-llm-for-staging) and specify your file using the `input` argument.
+Create a new file in Markdown format based on `REK.txt`. When running the code, refer to [Running the LLM for Staging](#running-the-llm-for-staging) section and specify your file using the `--rek` argument.
+### Replacing CT findings
+Prepare a JSON file following the schema below. When running the code, refer to [Running the LLM for Staging](#running-the-llm-for-staging) section and specify your file using the `input` argument.
 ```
 { 
     "type": "array",
