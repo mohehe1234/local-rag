@@ -2,7 +2,19 @@
 In this project, a retrieval-augmented generation (RAG) framework is used to enable large language models (LLMs) to perform guideline-based staging of pancreatic cancer CT findings. This repository contains all experimental code, raw data, and LLM-generated outputs. If you are running the code for the first time, please begin with the [Preparation](#preparation) section.
 
 - If you only want to inspect the experimental results, please refer to [Project Structure](#project-structure) section, and see the `results` directory.
-- If you want to run the program, please check out the `v1.0.0` tag (https://github.com/mohehe1234/local-rag/tree/v1.0.0), where the unnecessary results directory has been removed for installation.
+- If you want to run the program in the state used during our experiments, please check out the `v1.0.0` tag (https://github.com/mohehe1234/local-rag/tree/v1.0.0), where the unnecessary results directory has been removed for installation.
+
+## Citation
+If you use this work, please cite it.
+```bibtex
+@article {Johno2025.12.26.25343050,
+	author = {Johno, Hisashi and Amakawa, Akitomo and Komaba, Atsushi and Tozuka, Ryota and Johno, Yuki and Sato, Junichi and Yoshimura, Kentaro and Nakamoto, Kazunori and Ichikawa, Shintaro},
+	title = {Open-Source Offline-Deployable Retrieval-Augmented Large Language Model for Assisting Pancreatic Cancer Staging},
+	year = {2025},
+	doi = {10.64898/2025.12.26.25343050},
+	journal = {medRxiv}
+}
+```
 
 ## Project Structure
 ```
