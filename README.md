@@ -8,12 +8,13 @@ In this project, a retrieval-augmented generation (RAG) framework is used to ena
 ## Citation
 If you use this work, please cite it.
 ```bibtex
-@article {Johno2025.12.26.25343050,
+@article {Johno2026,
 	author = {Johno, Hisashi and Amakawa, Akitomo and Komaba, Atsushi and Tozuka, Ryota and Johno, Yuki and Sato, Junichi and Yoshimura, Kentaro and Nakamoto, Kazunori and Ichikawa, Shintaro},
 	title = {Open-Source Offline-Deployable Retrieval-Augmented Large Language Model for Assisting Pancreatic Cancer Staging},
-	year = {2025},
-	doi = {10.64898/2025.12.26.25343050},
-	journal = {medRxiv}
+	journal = {Jpn J Radiol},
+	year = {2026},
+    month = jul,
+    note = {doi: 10.1007/s11604-026-02049-8}
 }
 ```
 
